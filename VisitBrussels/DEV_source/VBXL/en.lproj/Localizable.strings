@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  VBXL
+
+  Created by Wim Vanhenden on 27/07/11.
+  Copyright 2011 Little Miss Robot. All rights reserved.
+*/
+
+
+/*INTERFACE TRANSLATIONS*/
+"BTNBACK" = "Back";
+"AROUNDME" = "Around me";
+"DOSEE" = "Do & see";
+"EATDRINK" = "Eat & drink";
+"NIGHTLIFE" = "Nightlife";
+"SLEEP" = "Sleep";
+
+/*INTERNAL NAVIGATION RELATED*/
+"NAVTOP10" = "Top 10";
+"NAVMUSEUMS" = "Museums & Visits";
+"NAVMONUMENTS" = "Monuments & sites";
+"NAVCULTURAL" = "Cultural agenda";
+"NAVSHOWS" = "Shows and concerts";
+"NAVGUIDEDTOURS" = "Official guided tours";
+"NAVWALKS" = "Walks";
+"NAVATTRACTIONS" = "Attractions and leisure";
+"NAVSHOPPING" = "Shopping";
+"NAVMARKETS" = "Markets";
+
+"NAVHOTELS" = "Hotels";
+"NAVBNB" = "Bed & Breakfast";
+"NAVYOUTHHOSTELS" = "Youth Hostels";
+"NAVBUDGET" = "Cheap stays";
+"NAVHOTELPACKS" = "Hotel packages";
+
+"NAVRESTO" = "Restaurants";
+"NAVBARS" = "Bars & Cafes";
+"NAVBREAKFAST" = "Breakfast";
+
+"NAVNIGHTCLUBS" = "Night clubs";
+"NAVRESTNIGHT" = "Night restaurants";
+"NAVLEISURE" = "Leisure";
+"NAVLIVEMUSIC" = "Live music";
+
+/*DETAIL PAGE RELATED*/
+"PRICEFROM" = "Starting from: ";
+"EACHNIGHT" = " €/night";
+"DATEOFSTART" = "Date of start: ";
+"DATEOFEND" = "Date of end: ";
+"KEUKEN" = "Kitchen: ";
+"PRICE" = "Price";
+
+/*ALERTVIEW UPDATE FILES */
+"AVTITLE" = "New information available";
+"AVMESSAGE" = "New information is available. Would you like to download it now?";
+
+/*RBTN*/
+"RBTNDOSEE" = "rbtnDoSee.png";
+"RBTNEATDRINK" = "rbtnEatDrink.png";
+"RBTNSLEEP" = "rbtnSleep.png";
+"RBTNNIGHTLIFE" = "rbtnNightLife.png";
+
+"RBTNDOSEEPRESSED" = "rbtnDoSeePressed.png";
+"RBTNEATDRINKPRESSED" = "rbtnEatDrinkPressed.png";
+"RBTNSLEEPPRESSED" = "rbtnSleepPressed.png";
+"RBTNNIGHTLIFEPRESSED" = "rbtnNightLifePressed.png";
+
+/*CONNECTED TO INTERNET*/
+"CONINTITLE" = "Connection";
+"CONINMESSAGE" = "You need to be connected to the internet to perform this action.";
+
+/*IN BRUSSEL*/
+"INBRUTITLE" = "Message";
+"INBRUMESSAGE" = "You are not in the Brussels region.";

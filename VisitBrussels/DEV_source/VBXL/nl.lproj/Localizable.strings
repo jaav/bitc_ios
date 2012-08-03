@@ -1,0 +1,72 @@
+/* 
+  Localizable.strings
+  VBXL
+
+  Created by Wim Vanhenden on 27/07/11.
+  Copyright 2011 Little Miss Robot. All rights reserved.
+*/
+/*INTERFACE TRANSLATIONS*/
+"BTNBACK" = "Terug";
+"AROUNDME" = "In de buurt";
+"DOSEE" = "Doen & zien";
+"EATDRINK" = "Eten & drinken";
+"NIGHTLIFE" = "Uitgaan";
+"SLEEP" = "Logeren";
+
+/*INTERNAL NAVIGATION RELATED*/
+"NAVTOP10" = "Top 10";
+"NAVMUSEUMS" = "Musea en attracties";
+"NAVMONUMENTS" = "Monumenten en sites";
+"NAVCULTURAL" = "Culturele agenda";
+"NAVSHOWS" = "Spektakels en concerten";
+"NAVGUIDEDTOURS" = "Officiële geleide bezoeken";
+"NAVWALKS" = "Wandelingen";
+"NAVATTRACTIONS" = "Vrije tijd en attracties";
+"NAVSHOPPING" = "Shopping";
+"NAVMARKETS" = "Markten";
+
+"NAVHOTELS" = "Hotels";
+"NAVBNB" = "Bed & Breakfast";
+"NAVYOUTHHOSTELS" = "Jeugdherbergen";
+"NAVBUDGET" = "Good deals";
+"NAVHOTELPACKS" = "Hotel Packages";
+
+"NAVRESTO" = "Restaurants";
+"NAVBARS" = "Bars & Cafés";
+"NAVBREAKFAST" = "Ontbijt";
+
+"NAVNIGHTCLUBS" = "Nachtclubs";
+"NAVRESTNIGHT" = "Nachtrestaurants";
+"NAVLEISURE" = "Vrije tijd";
+"NAVLIVEMUSIC" = "Live music";
+
+/*DETAIL PAGE RELATED*/
+"PRICEFROM" = "Vanaf: ";
+"EACHNIGHT" = " €/nacht";
+"DATEOFSTART" = "Begindatum: ";
+"DATEOFEND" = "Einddatum: ";
+"KEUKEN" = "Keuken: ";
+"PRICE" = "Prijs";
+
+/*ALERTVIEW UPDATE FILES */
+"AVTITLE" = "Nieuwe informatie beschikbaar";
+"AVMESSAGE" = "Er is nieuwe informatie beschikbaar. Wilt u die nu downloaden?";
+
+/*RBTN*/
+"RBTNDOSEE" = "rbtnDoSeeNL.png";
+"RBTNEATDRINK" = "rbtnEatDrinkNL.png";
+"RBTNSLEEP" = "rbtnSleepNL.png";
+"RBTNNIGHTLIFE" = "rbtnNightLifeNL.png";
+
+"RBTNDOSEEPRESSED" = "rbtnDoSeePressedNL.png";
+"RBTNEATDRINKPRESSED" = "rbtnEatDrinkPressedNL.png";
+"RBTNSLEEPPRESSED" = "rbtnSleepPressedNL.png";
+"RBTNNIGHTLIFEPRESSED" = "rbtnNightLifePressedNL.png";
+
+/*CONNECTED TO INTERNET*/
+"CONINTITLE" = "Connectie";
+"CONINMESSAGE" = "Om de route te bereken heeft U een internetverbinding nodig.";
+
+/*IN BRUSSEL*/
+"INBRUTITLE" = "Boodschap";
+"INBRUMESSAGE" = "U bevindt zich niet in de regio Brussel.";
