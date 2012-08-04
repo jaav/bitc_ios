@@ -64,7 +64,7 @@
 							<object class="IBUITextView" id="202588342">
 								<reference key="NSNextResponder" ref="451125967"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 313}, {728, 627}}</string>
+								<string key="NSFrame">{{74, 313}, {674, 627}}</string>
 								<reference key="NSSuperview" ref="451125967"/>
 								<reference key="NSWindow"/>
 								<object class="NSColor" key="IBUIBackgroundColor" id="676917167">
@@ -97,7 +97,7 @@
 							<object class="IBUILabel" id="600149524">
 								<reference key="NSNextResponder" ref="451125967"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 20}, {728, 46}}</string>
+								<string key="NSFrame">{{74, 20}, {674, 46}}</string>
 								<reference key="NSSuperview" ref="451125967"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="979591005"/>
@@ -130,7 +130,7 @@
 							<object class="IBUIImageView" id="979591005">
 								<reference key="NSNextResponder" ref="451125967"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 83}, {620, 200}}</string>
+								<string key="NSFrame">{{74, 83}, {620, 200}}</string>
 								<reference key="NSSuperview" ref="451125967"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="202588342"/>
@@ -261,8 +261,8 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="202588342"/>
-							<reference ref="979591005"/>
 							<reference ref="600149524"/>
+							<reference ref="979591005"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
