@@ -197,6 +197,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="556564219"/>
 								<reference key="IBUIBackgroundColor" ref="247240438"/>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
