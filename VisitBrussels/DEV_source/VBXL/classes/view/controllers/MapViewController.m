@@ -93,7 +93,7 @@
     
         //First set the map
     if(isPad)
-        mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 82.0f, 750, 850)];
+        mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 135.0f, 750, 800)];
     else
         mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 82.0f, 302, 318)];
     mapView.delegate  = self;
@@ -124,27 +124,33 @@
 -(void) setSubGroups {
     //subgroups dosee + divider
     
+    int multiplier = isPad?2:1;
+    
     subGroupDivider = [[UIImageView alloc] initWithFrame:CGRectMake(10, 80, 301, 2)];
     subGroupDivider.image = [UIImage imageNamed:@"aroundMeSubDivider.png"];
     [self.view addSubview:subGroupDivider];
     self.subGroupDivider.alpha = 0;
     AppData *data = [AppData sharedInstance];
     
-    arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 95, 17, 12)];
-    arrowLeft.image = [UIImage imageNamed:@"arrowDoSeeFilterLeft"];
+    if(isPad)
+        arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 140, 17*multiplier, 12*multiplier)];
+    else
+        arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 95, 17*multiplier, 12*multiplier)];
+    
+    arrowLeft.image = [UIImage imageNamed:[DataController adjustedImageName:@"arrowDoSeeFilterLeft.png"]];
     [self.view addSubview:arrowLeft];
     arrowLeft.alpha = 0;
     
     if(isPad)
-        arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(741, 95, 17, 12)];
+        arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(721, 140, 17*multiplier, 12*multiplier)];
     else
         arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(293, 95, 17, 12)];
-    arrowRight.image = [UIImage imageNamed:@"arrowDoSeeFilterRight"];
+    arrowRight.image = [UIImage imageNamed:[DataController adjustedImageName:@"arrowDoSeeFilterRight.png"]];
     [self.view addSubview:arrowRight];
     arrowRight.alpha = 0;
     
     if(isPad)
-        self.subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(30, 80, 708, 40)];
+        self.subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(44, 130, 678, 40)];
     else
         self.subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(30, 80, 260, 40)];
     
@@ -270,15 +276,15 @@
 {
     //buttons
     
-    rbtnDoSee = [[CTAButton alloc] initWithImage:NSLocalizedString(@"RBTNDOSEE", nil) andHighlightImage:NSLocalizedString(@"RBTNDOSEE", nil)];
-    rbtnEatDrink = [[CTAButton alloc] initWithImage:NSLocalizedString(@"RBTNEATDRINK", nil) andHighlightImage:NSLocalizedString(@"RBTNEATDRINK", nil)];
-    rbtnNightLife = [[CTAButton alloc] initWithImage:NSLocalizedString(@"RBTNNIGHTLIFE", nil) andHighlightImage:NSLocalizedString(@"RBTNNIGHTLIFE", nil)];
-    rbtnSleep = [[CTAButton alloc] initWithImage:NSLocalizedString(@"RBTNSLEEP", nil) andHighlightImage:NSLocalizedString(@"RBTNSLEEP", nil)];
+    rbtnDoSee = [[CTAButton alloc] initWithImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNDOSEE", nil)] andHighlightImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNDOSEE", nil)]];
+    rbtnEatDrink = [[CTAButton alloc] initWithImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNEATDRINK", nil)] andHighlightImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNEATDRINK", nil)]];
+    rbtnNightLife = [[CTAButton alloc] initWithImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNNIGHTLIFE", nil)] andHighlightImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNNIGHTLIFE", nil)]];
+    rbtnSleep = [[CTAButton alloc] initWithImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNSLEEP", nil)] andHighlightImage:[DataController adjustedImageName:NSLocalizedString(@"RBTNSLEEP", nil)]];
     
-    [rbtnDoSee configSelectedState:NSLocalizedString(@"RBTNDOSEEPRESSED", nil)];
-    [rbtnEatDrink configSelectedState:NSLocalizedString(@"RBTNEATDRINKPRESSED", nil)];
-    [rbtnNightLife configSelectedState:NSLocalizedString(@"RBTNNIGHTLIFEPRESSED", nil)];
-    [rbtnSleep configSelectedState:NSLocalizedString(@"RBTNSLEEPPRESSED", nil)];
+    [rbtnDoSee configSelectedState:[DataController adjustedImageName:NSLocalizedString(@"RBTNDOSEEPRESSED", nil)]];
+    [rbtnEatDrink configSelectedState:[DataController adjustedImageName:NSLocalizedString(@"RBTNEATDRINKPRESSED", nil)]];
+    [rbtnNightLife configSelectedState:[DataController adjustedImageName:NSLocalizedString(@"RBTNNIGHTLIFEPRESSED", nil)]];
+    [rbtnSleep configSelectedState:[DataController adjustedImageName:NSLocalizedString(@"RBTNSLEEPPRESSED", nil)]];
     
     [rbtnDoSee addTarget:self action:@selector(setRadioButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
     [rbtnEatDrink addTarget:self action:@selector(setRadioButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
@@ -289,13 +295,16 @@
     int diffX = 76;
     
     if(isPad){
-        originX = 242;
+        originX = 100;
+        diffX = 152;
     }
     
-    rbtnDoSee.frame = CGRectMake(originX, 16, 58, 55);
-    rbtnEatDrink.frame = CGRectMake(originX+diffX, 16, 58, 55);
-    rbtnNightLife.frame = CGRectMake(originX+2*diffX, 16, 58, 55);
-    rbtnSleep.frame = CGRectMake(originX+3*diffX, 16, 58, 55);
+    int multiplier = isPad?2:1;
+    
+    rbtnDoSee.frame = CGRectMake(originX, 16, 58*multiplier, 55*multiplier);
+    rbtnEatDrink.frame = CGRectMake(originX+diffX, 16, 58*multiplier, 55*multiplier);
+    rbtnNightLife.frame = CGRectMake(originX+2*diffX, 16, 58*multiplier, 55*multiplier);
+    rbtnSleep.frame = CGRectMake(originX+3*diffX, 16, 58*multiplier, 55*multiplier);
     
     [self.view addSubview:rbtnDoSee];
     [self.view addSubview:rbtnEatDrink];
@@ -434,7 +443,7 @@
          
                          animations:^{
                              if(isPad)
-                                 mapView.frame = CGRectMake(9.0f, 82.0f, 750, 850);
+                                 mapView.frame = CGRectMake(9.0f, 135.0f, 750, 800);
                              else
                                  mapView.frame = CGRectMake(9.0f, 82.0f, 302, 318);
                              
@@ -453,7 +462,7 @@
          
                          animations:^{ 
                              if(isPad)
-                                 mapView.frame = CGRectMake(9.0f, 120.0f, 750, 850);
+                                 mapView.frame = CGRectMake(9.0f, 173.0f, 750, 800);
                              else
                                  mapView.frame = CGRectMake(9.0f, 120.0f, 302, 318);
                              subGroupDivider.alpha = 1;

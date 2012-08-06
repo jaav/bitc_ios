@@ -64,7 +64,7 @@
 							<object class="IBUITextView" id="204278909">
 								<reference key="NSNextResponder" ref="479460300"/>
 								<int key="NSvFlags">282</int>
-								<string key="NSFrame">{{72, 409}, {677, 588}}</string>
+								<string key="NSFrame">{{72, 423}, {677, 588}}</string>
 								<reference key="NSSuperview" ref="479460300"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="189905818"/>
@@ -451,7 +451,6 @@
 						<reference key="object" ref="479460300"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="204278909"/>
 							<reference ref="189905818"/>
 							<reference ref="956685676"/>
 							<reference ref="459806216"/>
@@ -459,6 +458,7 @@
 							<reference ref="166502896"/>
 							<reference ref="359490099"/>
 							<reference ref="888544515"/>
+							<reference ref="204278909"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>

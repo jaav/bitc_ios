@@ -7,7 +7,7 @@
 //
 
 #import "SubGroupButton.h"
-
+#import "DataController.h"
 
 @implementation SubGroupButton
 
@@ -23,7 +23,7 @@
        
        self.backgroundColor = [UIColor clearColor];
        [self setTitle:title forState:UIControlStateNormal];
-       UIFont *myFont = [UIFont fontWithName:@"Helvetica-Bold" size:14.0];
+       UIFont *myFont = [UIFont fontWithName:@"Helvetica-Bold" size:isPad?28.0:14.0];
        CGSize size = [self.titleLabel.text sizeWithFont:myFont];
        self.frame = CGRectMake(10, 0, size.width+10, 40);
        self.titleLabel.font = myFont;
