@@ -403,25 +403,32 @@
             }
         }
         
-        NSMutableArray *arr = [NSMutableArray arrayWithObjects:selectedsubs,@"pinDoSee@2x.png" ,nil];
-        [thisarr addObject:arr];
-        
+        /*if(isPad)
+            [thisarr addObject:[NSMutableArray arrayWithObjects:selectedsubs,@"pinDoSee_iPad@2x.png" ,nil]];
+        else*/
+            [thisarr addObject:[NSMutableArray arrayWithObjects:selectedsubs,@"pinDoSee@2x.png" ,nil]];
         [selectedsubs release];
     }
     
     if([rbtnEatDrink isSelected]) {
-        NSMutableArray *arr = [NSMutableArray arrayWithObjects:data.subnavigationitemseatanddrink,@"pinEatDrink@2x.png" ,nil];
-        [thisarr addObject:arr];
+        /*if(isPad)
+            [thisarr addObject:[NSMutableArray arrayWithObjects:data.subnavigationitemseatanddrink,@"pinEatDrink_iPad@2x.png" ,nil]];
+        else*/
+            [thisarr addObject:[NSMutableArray arrayWithObjects:data.subnavigationitemseatanddrink,@"pinEatDrink@2x.png" ,nil]];
     }
     
     if([rbtnNightLife isSelected]) {
-        NSMutableArray *arr = [NSMutableArray arrayWithObjects:data.subnavigationitemsnightlife,@"pinNightLife@2x.png" ,nil];
-        [thisarr addObject:arr];
+        /*if(isPad)
+            [thisarr addObject:[NSMutableArray arrayWithObjects:data.subnavigationitemsnightlife,@"pinNightLife_iPad@2x.png" ,nil]];
+        else*/
+            [thisarr addObject:[NSMutableArray arrayWithObjects:data.subnavigationitemsnightlife,@"pinNightLife@2x.png" ,nil]];
     }
     
     if([rbtnSleep isSelected]) {
-        NSMutableArray *arr = [NSMutableArray arrayWithObjects:data.subnavigationitemssleep,@"pinSleep@2x.png" ,nil];
-        [thisarr addObject:arr];
+        /*if(isPad)
+            [thisarr addObject:[NSMutableArray arrayWithObjects:data.subnavigationitemssleep,@"pinSleep_iPad@2x.png" ,nil]];
+        else*/
+            [thisarr addObject:[NSMutableArray arrayWithObjects:data.subnavigationitemssleep,@"pinSleep@2x.png" ,nil]];
     }
     
     if ([thisarr count] >0) {
