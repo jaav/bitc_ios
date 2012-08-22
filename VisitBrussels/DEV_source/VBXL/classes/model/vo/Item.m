@@ -121,4 +121,12 @@
     return self;
 }
 
+-(NSString *)bigImageCacheFilePath  {
+    return [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:bigimagefilename];
+}
+
+-(NSString *)imageCacheFilePath {
+    return [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:imagefilename];
+}
+
 @end

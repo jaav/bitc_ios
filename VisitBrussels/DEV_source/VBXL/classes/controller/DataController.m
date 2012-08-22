@@ -329,6 +329,8 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
             
             }
             
+            //NSLog(@"item %@",[myitem title]);
+            
             [newcat.items addObject:myitem];
             [myitem release];
             

@@ -15,7 +15,7 @@
 //#define SERVER_URL @"http://visitbrussels.be/mobile"
 
 //DEV
-#define SERVER_URL @"http://bitcec2.wanabe.be/mobile/"
+#define SERVER_URL @"http://bitcec2.wanabe.be/mobile"
 
 @interface AppData : NSObject {
     NSMutableArray *groups;

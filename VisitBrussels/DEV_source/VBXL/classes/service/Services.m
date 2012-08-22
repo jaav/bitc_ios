@@ -15,6 +15,7 @@ static Services *_instance;
 
 @synthesize networkQueue;
 @synthesize connectedcallback;
+@synthesize xmlArray, operationQueue;
 #pragma mark -
 #pragma mark Singleton Methods
 
@@ -68,6 +69,7 @@ static Services *_instance;
 - (void)release
 {   
     [networkQueue release];
+
     //do nothing
 }
 
@@ -105,6 +107,11 @@ static Services *_instance;
 	[[self networkQueue] setRequestDidFailSelector:@selector(requestFailed:)];
 	[[self networkQueue] setQueueDidFinishSelector:@selector(queueFinished:)];
     
+    if(xmlArray)
+        [xmlArray release];
+    
+    self.xmlArray = [NSMutableArray array];
+    
     //LOOP SET FILES, PATHS and ADD TO DOWNLOAD QUEUE
     for (int i=0; i<[incoming count]; i++) {
         
@@ -115,8 +122,10 @@ static Services *_instance;
         NSURL *url = [NSURL URLWithString: [path stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
         
         NSString *localfile = [NSString stringWithFormat:@"%@/%@.%@", data.rootpathfordownloadedxmls,filename,@"xml"];
+        [xmlArray addObject:localfile];
         
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+        request.delegate = self;
         [request setDownloadCache:[ASIDownloadCache sharedCache]];
         [request setCachePolicy:ASIAskServerIfModifiedCachePolicy|ASIFallbackToCacheIfLoadFailsCachePolicy];
         [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
@@ -126,6 +135,11 @@ static Services *_instance;
         
        
     }
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:[NSNumber numberWithInt:-1] forKey:@"totalItem"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadImageInit" object:nil userInfo:dict];
+    
     //START THE QUEUE
     [[self networkQueue] go];
 }
@@ -136,13 +150,13 @@ static Services *_instance;
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
 	// You could release the queue here if you wanted
-	if ([[self networkQueue] requestsCount] == 0) {
+	/*if ([[self networkQueue] requestsCount] == 0) {
         
 		// Since this is a retained property, setting it to nil will release it
 		// This is the safest way to handle releasing things - most of the time you only ever need to release in your accessors
 		// And if you an Objective-C 2.0 property for the queue (as in this example) the accessor is generated automatically for you
 		[self setNetworkQueue:nil]; 
-	}
+	}*/
         
     if ([[request.originalURL absoluteString]isEqualToString:@"http://www.google.com"]) {
         if([request.responseStatusMessage isEqualToString:@"HTTP/1.1 200 OK"]){
@@ -157,9 +171,12 @@ static Services *_instance;
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
 	// You could release the queue here if you wanted
-	if ([[self networkQueue] requestsCount] == 0) {
+	/*if ([[self networkQueue] requestsCount] == 0) {
 		[self setNetworkQueue:nil];
-	}
+	}*/
+    
+    NSLog(@"request error : %@",[request error]);
+    
     if ([[request.originalURL absoluteString]isEqualToString:@"http://www.google.com"]) {
         VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
         notif.connectednotifname = connectedcallback;
@@ -169,11 +186,73 @@ static Services *_instance;
 
 - (void)queueFinished:(ASINetworkQueue *)queue {
 	// You could release the queue here if you wanted
-	if ([[self networkQueue] requestsCount] == 0) {
-		[self setNetworkQueue:nil]; 
-	}
+    
+    if(queue==[self networkQueue])  {
+        if ([queue requestsCount] == 0) {
+            [self setNetworkQueue:nil]; 
+        }
+        
+        DataController *data = [DataController sharedInstance];
+        NSMutableArray *downloadArray = [NSMutableArray array];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        
+        for(NSString *str in xmlArray)  {
+            
+            //NSLog(@"file %@ exist = %d",str,[fileManager fileExistsAtPath:str]);
+            
+            NSURL *url = [NSURL fileURLWithPath:str];
+            TBXML *tbxml =[TBXML tbxmlWithURL:url];
+            TBXMLElement *root = tbxml.rootXMLElement;
+            
+            if (root) {
+                Categorie *obj = [data parseXML:root];
+                for(Item *item in obj.items)    {
+                    NSArray *fileComponent = [item.imagefilename componentsSeparatedByString:@"."];
+                    NSArray *bigfileComponent = [item.bigimagefilename componentsSeparatedByString:@"."];
+                    
+                    if(![fileManager fileExistsAtPath:[item imageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[fileComponent objectAtIndex:0] ofType:[fileComponent objectAtIndex:1]])
+                        [downloadArray addObject:item.smallimage];
+                    
+                    if(![fileManager fileExistsAtPath:[item bigImageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[bigfileComponent objectAtIndex:0] ofType:[bigfileComponent objectAtIndex:1]])
+                        [downloadArray addObject:item.bigimage];
+                }
+            }
+        }
+        
+        if([downloadArray count]>0) {
+            NSLog(@"Total download = %d",[downloadArray count]);
+            if(!operationQueue) {
+                operationQueue = [[NSOperationQueue alloc] init];
+                [operationQueue setMaxConcurrentOperationCount:10];
+            }
+            
+            NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+            [dict setObject:[NSNumber numberWithInt:[downloadArray count]] forKey:@"totalItem"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadImageInit" object:nil userInfo:dict];
+            
+            DownloadImageOperation *op = [[DownloadImageOperation alloc] initWithArray:downloadArray];
+            [operationQueue addOperation:op];
+            [op release];
+        } else {
+            [self downloadImageCompleteAll:[NSDictionary dictionary]];
+        }
+    }
+}
+
+- (void)downloadImageStart:(NSDictionary *)dict {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadImageStart" object:nil userInfo:dict];
+}
+
+- (void)downloadImageProgress:(NSDictionary *)dict  {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadImageProgress" object:nil userInfo:dict];
+}
+
+- (void)downloadImageCompleteAll:(NSDictionary *)dict   {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadImageCompleteAll" object:nil userInfo:dict];
+    
     NSLog(@"All new files are downloaded...start parsing");
     VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
     [notif xmlfilesAreLoadedFromTheInternet];
 }
+
 @end

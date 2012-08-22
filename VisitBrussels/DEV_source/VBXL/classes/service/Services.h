@@ -15,19 +15,31 @@
 
 #import "AppData.h"
 #import "VBXLNotificationCenter.h"
+#import "DataController.h"
+#import "DownloadImageOperation.h"
 
 @interface Services : NSObject {
     ASINetworkQueue *networkQueue;
     NSString *connectedcallback;
+    NSMutableArray *xmlArray;
+    
+    NSOperationQueue *operationQueue;
 }
 
 @property (retain) ASINetworkQueue *networkQueue;
 @property (retain) NSString *connectedcallback;
+@property (retain) NSMutableArray *xmlArray;
+
+@property (readonly) NSOperationQueue *operationQueue;
 
 - (void) loadXMLBasedOnLanguage:(NSMutableArray*)incoming;
 
 - (void) checkIfConnectedToInternet;
 
 + (Services*) sharedInstance;
+
+- (void)downloadImageStart:(NSDictionary *)dict;
+- (void)downloadImageProgress:(NSDictionary *)dict;
+- (void)downloadImageCompleteAll:(NSDictionary *)dict;
 
 @end

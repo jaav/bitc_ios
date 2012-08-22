@@ -33,6 +33,13 @@
     
     UIImageView *foreground;
     
+    UIView *loadingView;
+    UIProgressView *progress1;
+    UILabel *label1;
+    UIProgressView *progress2;
+    UILabel *label2;
+    
+    UILabel *loadingTitleLabel;
 }
 
 @property(nonatomic,retain)HeaderView *vbxlHeaderView;
@@ -47,6 +54,12 @@
 @property(nonatomic,retain)IBOutlet UIButton *btnSleep;
 @property(nonatomic,retain)IBOutlet UIButton *btnSearch;
 @property(nonatomic,retain)IBOutlet UIButton *btnSettings;
+@property(nonatomic,retain)IBOutlet UIView *loadingView;
+@property(nonatomic,retain)IBOutlet UIProgressView *progress1;
+@property(nonatomic,retain)IBOutlet UILabel *label1;
+@property(nonatomic,retain)IBOutlet UIProgressView *progress2;
+@property(nonatomic,retain)IBOutlet UILabel *label2;
+@property(nonatomic,retain)IBOutlet UILabel *loadingTitleLabel;
 
 -(IBAction)mainButtonClicked:(id)sender;
 -(IBAction)searchButtonClicked:(id)sender;

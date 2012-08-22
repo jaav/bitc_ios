@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0919331215CAC9BD00AC1AB8 /* VBXLViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0919331015CAC9BD00AC1AB8 /* VBXLViewController_iPad.xib */; };
 		0919331515CAC9C400AC1AB8 /* VBXLViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0919331315CAC9C400AC1AB8 /* VBXLViewController_iPad.xib */; };
+		0984B69615E4DC5D006066C9 /* DownloadImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0984B69515E4DC5D006066C9 /* DownloadImageOperation.m */; };
 		0986216815D0324F00FCADBA /* aroundMeSubDivider_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0986212A15D0324F00FCADBA /* aroundMeSubDivider_iPad.png */; };
 		0986216915D0324F00FCADBA /* arrowDoSeeFilterLeft_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0986212B15D0324F00FCADBA /* arrowDoSeeFilterLeft_iPad.png */; };
 		0986216A15D0324F00FCADBA /* arrowDoSeeFilterLeft_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0986212C15D0324F00FCADBA /* arrowDoSeeFilterLeft_iPad@2x.png */; };
@@ -1703,6 +1704,8 @@
 /* Begin PBXFileReference section */
 		0919331115CAC9BD00AC1AB8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = VBXLViewController_iPad.xib; sourceTree = "<group>"; };
 		0919331415CAC9C400AC1AB8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = VBXLViewController_iPad.xib; sourceTree = "<group>"; };
+		0984B69415E4DC5D006066C9 /* DownloadImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImageOperation.h; sourceTree = "<group>"; };
+		0984B69515E4DC5D006066C9 /* DownloadImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImageOperation.m; sourceTree = "<group>"; };
 		0986212A15D0324F00FCADBA /* aroundMeSubDivider_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aroundMeSubDivider_iPad.png; sourceTree = "<group>"; };
 		0986212B15D0324F00FCADBA /* arrowDoSeeFilterLeft_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowDoSeeFilterLeft_iPad.png; sourceTree = "<group>"; };
 		0986212C15D0324F00FCADBA /* arrowDoSeeFilterLeft_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowDoSeeFilterLeft_iPad@2x.png"; sourceTree = "<group>"; };
@@ -4147,6 +4150,8 @@
 			children = (
 				ADA9600513DDBBD10077095A /* Services.h */,
 				ADA9600613DDBBD10077095A /* Services.m */,
+				0984B69415E4DC5D006066C9 /* DownloadImageOperation.h */,
+				0984B69515E4DC5D006066C9 /* DownloadImageOperation.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -7346,6 +7351,7 @@
 				976FA44713FD00400026AC2F /* DetailPageWalksViewController.m in Sources */,
 				97E45A6513FD54CD002663FF /* DetailPageRestoViewController.m in Sources */,
 				971E742B140E30B9000202EF /* SubGroupButton.m in Sources */,
+				0984B69615E4DC5D006066C9 /* DownloadImageOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -175,22 +175,34 @@
         UIImage *myimage = [UIImage imageNamed:self.myitem.bigimagefilename];
         if(myimage) {
             //take local image
-            [imageView setImage:[UIImage imageNamed:self.myitem.bigimagefilename]];
+            [imageView setImage:myimage];
         } else {
-            //download image
-            NSURL *myurl = [NSURL URLWithString:self.myitem.bigimage];
-            [imageView setImageWithURL:myurl placeholderImage:[UIImage imageNamed:@"imagePlaceholder"]];
+            myimage = [UIImage imageWithContentsOfFile:[self.myitem bigImageCacheFilePath]];
+            
+            if(myimage){
+                [imageView setImage:myimage];
+            }else{
+                //download image
+                NSURL *myurl = [NSURL URLWithString:self.myitem.bigimage];
+                [imageView setImageWithURL:myurl placeholderImage:[UIImage imageNamed:@"imagePlaceholder"]];
+            }
         }
     }
     else if (![self.myitem.imagefilename isEqualToString:@""] && self.myitem.imagefilename != NULL) {
         UIImage *myimage = [UIImage imageNamed:self.myitem.imagefilename];
         if(myimage) {
             //take local image
-            [imageView setImage:[UIImage imageNamed:self.myitem.imagefilename]];
+            [imageView setImage:myimage];
         } else {
-            //download image
-            NSURL *myurl = [NSURL URLWithString:self.myitem.smallimage];
-            [imageView setImageWithURL:myurl placeholderImage:[UIImage imageNamed:@"imagePlaceholder"]];
+            myimage = [UIImage imageWithContentsOfFile:[self.myitem imageCacheFilePath]];
+            
+            if(myimage){
+                [imageView setImage:myimage];
+            }else{
+                //download image
+                NSURL *myurl = [NSURL URLWithString:self.myitem.smallimage];
+                [imageView setImageWithURL:myurl placeholderImage:[UIImage imageNamed:@"imagePlaceholder"]];
+            }
         }
     } else {
         NSLog(@"no image found");

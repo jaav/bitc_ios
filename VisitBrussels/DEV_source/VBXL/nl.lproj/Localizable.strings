@@ -70,3 +70,6 @@
 /*IN BRUSSEL*/
 "INBRUTITLE" = "Boodschap";
 "INBRUMESSAGE" = "U bevindt zich niet in de regio Brussel.";
+
+"DOWNLOADXML" = "Downloading XML";
+"DOWNLOADIMAGE" = "Downloading Images";

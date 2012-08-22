@@ -11,6 +11,13 @@
 
 #import "DownloadAllImages.h"
 
+@interface VBXLViewController() {
+    int maxItem;
+    int currentIndex;
+}
+
+@end
+
 @implementation VBXLViewController
 @synthesize vbxlHeaderView;
 @synthesize subCategoryTableViewController;
@@ -25,6 +32,7 @@
 
 @synthesize btnSearch;
 @synthesize btnSettings;
+@synthesize loadingView, progress1, progress2, label1, label2, loadingTitleLabel;
 
 #pragma mark - Memory Management
 
@@ -57,6 +65,12 @@
     self.btnSleep = nil;
     self.btnSearch = nil;
     self.btnSettings = nil;
+    self.loadingView = nil;
+    self.progress1 = nil;
+    self.progress2 = nil;
+    self.label1 = nil;
+    self.label2 = nil;
+    self.loadingTitleLabel = nil;
     
     [super viewDidUnload];
 
@@ -110,6 +124,11 @@
         vbxlHeaderView = [[HeaderView alloc]initWithFrame:CGRectMake(0, 0, 320, 103)];
     [self.view addSubview:vbxlHeaderView];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageInit:) name:@"downloadImageInit" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageStart:) name:@"downloadImageStart" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageProgress:) name:@"downloadImageProgress" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageCompleteAll:) name:@"downloadImageCompleteAll" object:nil];
+    
     if(!foreground) {
         foreground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[DataController adjustedImageName:@"WaitScreen.png"]]];
         foreground.frame =self.view.bounds;
@@ -127,6 +146,67 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - Notification handler
+
+-(void)handleDownloadImageInit:(NSNotification *)notif  {
+    NSDictionary *userInfo = [notif userInfo];
+    
+    int total = [[userInfo objectForKey:@"totalItem"] intValue];
+    
+    if(total>=0) {
+        maxItem = total;
+        currentIndex = 0;
+        
+        loadingTitleLabel.text = NSLocalizedString(@"DOWNLOADIMAGE", nil);
+        [label1 setHidden:NO];
+        [label2 setHidden:NO];
+        [progress1 setHidden:NO];
+        [progress2 setHidden:NO];
+        
+        label1.text = [NSString stringWithFormat:@"%d / %d",currentIndex, maxItem];
+        [progress1 setProgress:0.0];
+    } else {
+        loadingTitleLabel.text = NSLocalizedString(@"DOWNLOADXML", nil);
+        label1.text = @"";
+        label2.text = @"";
+        [progress1 setProgress:0.0];
+        [progress2 setProgress:0.0];
+        
+        [label1 setHidden:YES];
+        [label2 setHidden:YES];
+        [progress1 setHidden:YES];
+        [progress2 setHidden:YES];
+        
+        [self.view addSubview:loadingView];
+        [self.view bringSubviewToFront:loadingView];
+    }
+}
+
+-(void)handleDownloadImageStart:(NSNotification *)notif  {
+    NSDictionary *userInfo = [notif userInfo];
+    NSString *fileName = [userInfo objectForKey:@"currentImage"];
+    
+    currentIndex++;
+    
+    label1.text = [NSString stringWithFormat:@"%d / %d",currentIndex, maxItem];
+    [progress1 setProgress:1.0*currentIndex/maxItem];
+    
+    label2.text = fileName;
+    [progress2 setProgress:0.0];
+}
+
+-(void)handleDownloadImageProgress:(NSNotification *)notif  {
+    NSDictionary *userInfo = [notif userInfo];
+    int progressInPercent = [[userInfo objectForKey:@"currentProgress"] intValue];
+    
+    [progress2 setProgress:progressInPercent/100.0];
+}
+
+-(void)handleDownloadImageCompleteAll:(NSNotification *)notif  {
+    //NSDictionary *userInfo = [notif userInfo];
+    
+    [loadingView removeFromSuperview];
+}
 
 #pragma mark - Home Button Methods
 
@@ -141,7 +221,6 @@
     }
     
 }   
-
 
 -(IBAction)searchButtonClicked:(id)sender {
     [self createSearchView];

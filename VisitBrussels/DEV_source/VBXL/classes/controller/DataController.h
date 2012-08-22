@@ -29,6 +29,7 @@
 - (NSMutableArray *) returnItemsBasedOnNavigationItem:(NSString*)navitem;
 - (NSMutableArray*) returnAllItems;
 - (void) checkForOutdatedFiles;
+- (Categorie *) parseXML:(TBXMLElement*)root;
 
 +(NSString *)adjustedNibName:(NSString *)nib;
 +(NSString *)adjustedImageName:(NSString *)imageName;

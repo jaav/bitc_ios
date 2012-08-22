@@ -64,6 +64,7 @@
 @property NSInteger zipcode;
 @property NSInteger ranking;
 
-
+-(NSString *)bigImageCacheFilePath;
+-(NSString *)imageCacheFilePath;
 
 @end

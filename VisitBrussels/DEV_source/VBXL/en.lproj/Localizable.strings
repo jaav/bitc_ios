@@ -72,3 +72,6 @@
 /*IN BRUSSEL*/
 "INBRUTITLE" = "Message";
 "INBRUMESSAGE" = "You are not in the Brussels region.";
+
+"DOWNLOADXML" = "Downloading XML";
+"DOWNLOADIMAGE" = "Downloading Images";
