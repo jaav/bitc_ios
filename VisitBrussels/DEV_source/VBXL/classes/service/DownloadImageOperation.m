@@ -44,7 +44,7 @@
         
     }
     
-    [[Services sharedInstance] performSelectorOnMainThread:@selector(downloadImageResponse:) withObject:dict waitUntilDone:YES];
+    [[Services sharedInstance] performSelectorOnMainThread:@selector(downloadImageCompleteAll:) withObject:dict waitUntilDone:YES];
     [pool drain];
 }
 

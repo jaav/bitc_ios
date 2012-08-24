@@ -100,6 +100,8 @@ static DataController *_instance;
             
         NSDate *docdate = [formatter dateFromString:mycateg.exporteddate];
         
+        //NSLog(@"Categorie = %@, docdate = %@",mycateg,docdate);
+        
         if (![docdate isThisWeek]) {
             NSString *xmlfile = mycateg.group;
             [returnvalues addObject:xmlfile];
@@ -217,6 +219,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
     TBXMLElement * date = [TBXML childElementNamed:@"exported_date" parentElement:root];
     if (date) {
         newcat.exporteddate = [TBXML textForElement:date];
+        //newcat.exporteddate = @"20120824";
     }
     
     //LOOP THROUGH THE ITEMS

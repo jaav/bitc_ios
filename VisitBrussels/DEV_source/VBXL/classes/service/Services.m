@@ -124,6 +124,8 @@ static Services *_instance;
         NSString *localfile = [NSString stringWithFormat:@"%@/%@.%@", data.rootpathfordownloadedxmls,filename,@"xml"];
         [xmlArray addObject:localfile];
         
+        //NSLog(@"Path = %@",path);
+        
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
         request.delegate = self;
         [request setDownloadCache:[ASIDownloadCache sharedCache]];
