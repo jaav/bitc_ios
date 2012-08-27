@@ -217,7 +217,7 @@ static Services *_instance;
                     NSArray *fileComponent = [item.imagefilename componentsSeparatedByString:@"."];
                     NSArray *bigfileComponent = [item.bigimagefilename componentsSeparatedByString:@"."];
                     
-                    if(![item.smallimage isEqualToString:@""])  {
+                    if(item.smallimage && ![item.smallimage isEqualToString:@""])  {
                         if(![fileManager fileExistsAtPath:[item imageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[fileComponent objectAtIndex:0] ofType:[fileComponent objectAtIndex:1]])
                             [downloadArray addObject:item.smallimage];
                         else    {
@@ -225,7 +225,7 @@ static Services *_instance;
                         }
                     }
                     
-                    if(![item.bigimage isEqualToString:@""])    {
+                    if(item.bigimage && ![item.bigimage isEqualToString:@""])    {
                         if(![fileManager fileExistsAtPath:[item bigImageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[bigfileComponent objectAtIndex:0] ofType:[bigfileComponent objectAtIndex:1]])
                             [downloadArray addObject:item.bigimage];
                         else {
