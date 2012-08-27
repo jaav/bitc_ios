@@ -198,6 +198,10 @@ static Services *_instance;
         NSMutableArray *downloadArray = [NSMutableArray array];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
+        NSMutableArray *existList = [NSMutableArray array];
+        
+        int totalItem = 0;
+        
         for(NSString *str in xmlArray)  {
             
             //NSLog(@"file %@ exist = %d",str,[fileManager fileExistsAtPath:str]);
@@ -208,21 +212,37 @@ static Services *_instance;
             
             if (root) {
                 Categorie *obj = [data parseXML:root];
+                totalItem += [obj.items count];
                 for(Item *item in obj.items)    {
                     NSArray *fileComponent = [item.imagefilename componentsSeparatedByString:@"."];
                     NSArray *bigfileComponent = [item.bigimagefilename componentsSeparatedByString:@"."];
                     
-                    if(![fileManager fileExistsAtPath:[item imageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[fileComponent objectAtIndex:0] ofType:[fileComponent objectAtIndex:1]])
-                        [downloadArray addObject:item.smallimage];
+                    if(![item.smallimage isEqualToString:@""])  {
+                        if(![fileManager fileExistsAtPath:[item imageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[fileComponent objectAtIndex:0] ofType:[fileComponent objectAtIndex:1]])
+                            [downloadArray addObject:item.smallimage];
+                        else    {
+                            [existList addObject:item.smallimage];
+                        }
+                    }
                     
-                    if(![fileManager fileExistsAtPath:[item bigImageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[bigfileComponent objectAtIndex:0] ofType:[bigfileComponent objectAtIndex:1]])
-                        [downloadArray addObject:item.bigimage];
+                    if(![item.bigimage isEqualToString:@""])    {
+                        if(![fileManager fileExistsAtPath:[item bigImageCacheFilePath]]&&![[NSBundle mainBundle] pathForResource:[bigfileComponent objectAtIndex:0] ofType:[bigfileComponent objectAtIndex:1]])
+                            [downloadArray addObject:item.bigimage];
+                        else {
+                            [existList addObject:item.bigimage];
+                        }
+                    }
                 }
             }
         }
         
+        NSLog(@"Total Item = %d, Total download = %d",totalItem,[downloadArray count]);
+        
+        if([existList count]>0) {
+            NSLog(@"Exist : %@",existList);
+        }
+        
         if([downloadArray count]>0) {
-            NSLog(@"Total download = %d",[downloadArray count]);
             if(!operationQueue) {
                 operationQueue = [[NSOperationQueue alloc] init];
                 [operationQueue setMaxConcurrentOperationCount:10];

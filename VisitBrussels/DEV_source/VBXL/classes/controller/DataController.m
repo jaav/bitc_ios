@@ -108,6 +108,8 @@ static DataController *_instance;
         }
     }
     
+    NSLog(@"Categ count = %d, return count = %d",[categ count],[returnvalues count]);
+    
     [formatter release];
     
     return returnvalues;
