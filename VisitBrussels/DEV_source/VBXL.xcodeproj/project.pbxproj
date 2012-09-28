@@ -2933,16 +2933,16 @@
 			buildSettings = {
 				ARCHS = armv7;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "D233BC96-8197-49E4-B2EA-9C82BBED5718";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D233BC96-8197-49E4-B2EA-9C82BBED5718";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -2987,8 +2987,8 @@
 				ARCHS = armv7;
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Entitlements.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBXL/VBXL-Prefix.pch";
@@ -3005,8 +3005,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D233BC96-8197-49E4-B2EA-9C82BBED5718";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D233BC96-8197-49E4-B2EA-9C82BBED5718";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
