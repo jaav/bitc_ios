@@ -2609,6 +2609,8 @@
 		09D2E96315C3120B008A80CE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D2E95615C3120B008A80CE /* Icon-Small@2x.png */; };
 		09D2E96515C3120B008A80CE /* WaitScreen_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D2E95815C3120B008A80CE /* WaitScreen_iPad.png */; };
 		09D2E96615C3120B008A80CE /* WaitScreen_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D2E95915C3120B008A80CE /* WaitScreen_iPad@2x.png */; };
+		09F56E451629765E00D7BEE8 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F56E431629765E00D7BEE8 /* iTunesArtwork.png */; };
+		09F56E461629765E00D7BEE8 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F56E441629765E00D7BEE8 /* iTunesArtwork@2x.png */; };
 		971E742B140E30B9000202EF /* SubGroupButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 971E742A140E30B9000202EF /* SubGroupButton.m */; };
 		974D26DE141E2F2B000B9EF5 /* arrowDoSeeFilterLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D26DA141E2F2B000B9EF5 /* arrowDoSeeFilterLeft.png */; };
 		974D26DF141E2F2B000B9EF5 /* arrowDoSeeFilterLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D26DB141E2F2B000B9EF5 /* arrowDoSeeFilterLeft@2x.png */; };
@@ -2741,7 +2743,6 @@
 		97F5B38613FFD11800E84907 /* pinSleep.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F5B37E13FFD11800E84907 /* pinSleep.png */; };
 		97F5B38713FFD11800E84907 /* pinSleep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F5B37F13FFD11800E84907 /* pinSleep@2x.png */; };
 		AD210B1F13FBCCBD001C615B /* DownloadAllImages.m in Sources */ = {isa = PBXBuildFile; fileRef = AD210B1E13FBCCBD001C615B /* DownloadAllImages.m */; };
-		AD23B7E714322FCC009D5BF4 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AD23B7E614322FCC009D5BF4 /* iTunesArtwork */; };
 		AD2CD42F13FC23480032B9F5 /* DeHTMLFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2CD42E13FC23480032B9F5 /* DeHTMLFormatter.m */; };
 		AD35D32913E0055000CA9A45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD35D32313E0055000CA9A45 /* InfoPlist.strings */; };
 		AD35D32D13E0058900CA9A45 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD35D32C13E0058900CA9A45 /* MainWindow.xib */; };
@@ -5601,6 +5602,8 @@
 		09D2E95615C3120B008A80CE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		09D2E95815C3120B008A80CE /* WaitScreen_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaitScreen_iPad.png; sourceTree = "<group>"; };
 		09D2E95915C3120B008A80CE /* WaitScreen_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WaitScreen_iPad@2x.png"; sourceTree = "<group>"; };
+		09F56E431629765E00D7BEE8 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		09F56E441629765E00D7BEE8 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		971E7429140E30B9000202EF /* SubGroupButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGroupButton.h; sourceTree = "<group>"; };
 		971E742A140E30B9000202EF /* SubGroupButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGroupButton.m; sourceTree = "<group>"; };
 		974D26DA141E2F2B000B9EF5 /* arrowDoSeeFilterLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowDoSeeFilterLeft.png; sourceTree = "<group>"; };
@@ -5745,7 +5748,6 @@
 		97F5B37F13FFD11800E84907 /* pinSleep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinSleep@2x.png"; sourceTree = "<group>"; };
 		AD210B1D13FBCCBD001C615B /* DownloadAllImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadAllImages.h; sourceTree = "<group>"; };
 		AD210B1E13FBCCBD001C615B /* DownloadAllImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadAllImages.m; sourceTree = "<group>"; wrapsLines = 0; };
-		AD23B7E614322FCC009D5BF4 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AD2CD42D13FC23480032B9F5 /* DeHTMLFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeHTMLFormatter.h; sourceTree = "<group>"; };
 		AD2CD42E13FC23480032B9F5 /* DeHTMLFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeHTMLFormatter.m; sourceTree = "<group>"; wrapsLines = 0; };
 		AD35D32413E0055000CA9A45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -8757,7 +8759,8 @@
 		AD5B3553142A07CD00896CDD /* icons_startup */ = {
 			isa = PBXGroup;
 			children = (
-				AD23B7E614322FCC009D5BF4 /* iTunesArtwork */,
+				09F56E431629765E00D7BEE8 /* iTunesArtwork.png */,
+				09F56E441629765E00D7BEE8 /* iTunesArtwork@2x.png */,
 				AD5B3554142A07CD00896CDD /* Default.png */,
 				AD5B3555142A07CD00896CDD /* Default@2x.png */,
 				AD5B3556142A07CD00896CDD /* Icon.png */,
@@ -9684,7 +9687,6 @@
 				AD36616F142B1D2C00730963 /* btnBook@2x.png in Resources */,
 				AD366170142B1D2C00730963 /* btnBookPressed.png in Resources */,
 				AD366171142B1D2C00730963 /* btnBookPressed@2x.png in Resources */,
-				AD23B7E714322FCC009D5BF4 /* iTunesArtwork in Resources */,
 				ADBB544A1488EEA80027AD72 /* ATTRACTIONS_EN.xml in Resources */,
 				ADBB544B1488EEA80027AD72 /* ATTRACTIONS_FR.xml in Resources */,
 				ADBB544C1488EEA80027AD72 /* ATTRACTIONS_NL.xml in Resources */,
@@ -12343,6 +12345,8 @@
 				0962D687161ACFBC0087A357 /* wood_brussels.jpg in Resources */,
 				0962D688161ACFBC0087A357 /* You.jpg in Resources */,
 				0962D689161ACFBC0087A357 /* You_Brussels.jpg in Resources */,
+				09F56E451629765E00D7BEE8 /* iTunesArtwork.png in Resources */,
+				09F56E461629765E00D7BEE8 /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -12518,7 +12522,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -12544,7 +12548,7 @@
 					"$(SOURCE_ROOT)/dependencies/Proj4/",
 				);
 				INFOPLIST_FILE = "VBXL/VBXL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -12571,7 +12575,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -12597,7 +12601,7 @@
 					"$(SOURCE_ROOT)/dependencies/Proj4/",
 				);
 				INFOPLIST_FILE = "VBXL/VBXL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -12624,7 +12628,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -12643,7 +12647,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -12670,7 +12674,7 @@
 					"$(SOURCE_ROOT)/dependencies/Proj4/",
 				);
 				INFOPLIST_FILE = "VBXL/VBXL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -12691,8 +12695,8 @@
 				ARCHS = armv7;
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Entitlements.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBXL/VBXL-Prefix.pch";
@@ -12703,14 +12707,14 @@
 					"$(SOURCE_ROOT)/dependencies/Proj4/",
 				);
 				INFOPLIST_FILE = "VBXL/VBXL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
