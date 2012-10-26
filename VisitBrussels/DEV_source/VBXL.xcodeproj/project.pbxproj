@@ -2611,6 +2611,83 @@
 		09D2E96615C3120B008A80CE /* WaitScreen_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D2E95915C3120B008A80CE /* WaitScreen_iPad@2x.png */; };
 		09F56E451629765E00D7BEE8 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F56E431629765E00D7BEE8 /* iTunesArtwork.png */; };
 		09F56E461629765E00D7BEE8 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F56E441629765E00D7BEE8 /* iTunesArtwork@2x.png */; };
+		964E18A7163ACA1B0074DD17 /* CONTEMPARCH_EN.xml in Resources */ = {isa = PBXBuildFile; fileRef = 964E18A4163ACA1B0074DD17 /* CONTEMPARCH_EN.xml */; };
+		964E18A8163ACA1B0074DD17 /* CONTEMPARCH_FR.xml in Resources */ = {isa = PBXBuildFile; fileRef = 964E18A5163ACA1B0074DD17 /* CONTEMPARCH_FR.xml */; };
+		964E18A9163ACA1B0074DD17 /* CONTEMPARCH_NL.xml in Resources */ = {isa = PBXBuildFile; fileRef = 964E18A6163ACA1B0074DD17 /* CONTEMPARCH_NL.xml */; };
+		964E18F4163AE1410074DD17 /* 848-578.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18AA163AE1400074DD17 /* 848-578.jpg */; };
+		964E18F5163AE1410074DD17 /* 1415_14.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18AB163AE1400074DD17 /* 1415_14.JPG */; };
+		964E18F6163AE1410074DD17 /* 1416_10.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18AC163AE1400074DD17 /* 1416_10.JPG */; };
+		964E18F7163AE1410074DD17 /* 1769_067.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18AD163AE1400074DD17 /* 1769_067.jpg */; };
+		964E18F8163AE1410074DD17 /* TNB-1-%20Marie-Franc%CC%A7oise%20Plissart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18AE163AE1400074DD17 /* TNB-1-%20Marie-Franc%CC%A7oise%20Plissart.jpg */; };
+		964E18F9163AE1410074DD17 /* 000007-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18AF163AE1400074DD17 /* 000007-2.jpg */; };
+		964E18FA163AE1410074DD17 /* 0539%20SIBELGA%20II%20081006%2016%20Lowres%20%C2%A9%20Serge%20Brison.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B0163AE1400074DD17 /* 0539%20SIBELGA%20II%20081006%2016%20Lowres%20%C2%A9%20Serge%20Brison.jpg */; };
+		964E18FB163AE1410074DD17 /* 9613-VVL_e01_LN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B1163AE1400074DD17 /* 9613-VVL_e01_LN.jpg */; };
+		964E18FC163AE1410074DD17 /* BLOMME_20070530_facade_05%20clean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B2163AE1400074DD17 /* BLOMME_20070530_facade_05%20clean.jpg */; };
+		964E18FD163AE1410074DD17 /* CGR%2085%20%C2%A9%20A2RC%20ARCHITECTS%20-%20G.%20De%20Kinder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B3163AE1400074DD17 /* CGR%2085%20%C2%A9%20A2RC%20ARCHITECTS%20-%20G.%20De%20Kinder.jpg */; };
+		964E18FE163AE1410074DD17 /* DSCF8802.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B4163AE1400074DD17 /* DSCF8802.jpg */; };
+		964E18FF163AE1410074DD17 /* Filip-Dujardin-01-UrsulinesSquare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B5163AE1400074DD17 /* Filip-Dujardin-01-UrsulinesSquare.jpg */; };
+		964E1900163AE1410074DD17 /* FLEURI_20040326_facadeCMYK_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B6163AE1400074DD17 /* FLEURI_20040326_facadeCMYK_01.jpg */; };
+		964E1901163AE1410074DD17 /* Photo%20307_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B7163AE1400074DD17 /* Photo%20307_0.jpg */; };
+		964E1902163AE1410074DD17 /* TRM%20-%20J%20Jacobs%2004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B8163AE1400074DD17 /* TRM%20-%20J%20Jacobs%2004.jpg */; };
+		964E1903163AE1410074DD17 /* ULB%20Auditoire%20Solbosch%201.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18B9163AE1400074DD17 /* ULB%20Auditoire%20Solbosch%201.jpg */; };
+		964E1904163AE1410074DD17 /* WSL%20-%2016%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18BA163AE1400074DD17 /* WSL%20-%2016%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */; };
+		964E1905163AE1410074DD17 /* 01%C2%A9A2RC%20ARCHITECTS%2CJ.%20Jacobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18BB163AE1400074DD17 /* 01%C2%A9A2RC%20ARCHITECTS%2CJ.%20Jacobs.jpg */; };
+		964E1906163AE1410074DD17 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18BC163AE1400074DD17 /* 04.jpg */; };
+		964E1907163AE1410074DD17 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18BD163AE1400074DD17 /* 05.jpg */; };
+		964E1908163AE1410074DD17 /* 0235_RIVES%20GAUCHES_IMAGES_A.ZIELONKA_029__MG_0849.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18BE163AE1400074DD17 /* 0235_RIVES%20GAUCHES_IMAGES_A.ZIELONKA_029__MG_0849.JPG */; };
+		964E1909163AE1410074DD17 /* 0631%20BRUT_e08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18BF163AE1400074DD17 /* 0631%20BRUT_e08.jpg */; };
+		964E190A163AE1410074DD17 /* 1508_07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C0163AE1400074DD17 /* 1508_07.jpg */; };
+		964E190B163AE1410074DD17 /* 9534_B%26E_05_LOW.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C1163AE1400074DD17 /* 9534_B%26E_05_LOW.jpg */; };
+		964E190C163AE1410074DD17 /* 9701%20POIN_e01bis_60x90.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C2163AE1400074DD17 /* 9701%20POIN_e01bis_60x90.jpg */; };
+		964E190D163AE1410074DD17 /* Ingang%20Sint-Pieterskerkstraat%201.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C3163AE1400074DD17 /* Ingang%20Sint-Pieterskerkstraat%201.jpg */; };
+		964E190E163AE1410074DD17 /* PICT0011.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C4163AE1400074DD17 /* PICT0011.JPG */; };
+		964E190F163AE1410074DD17 /* Rossel_facade%20avant_copyright%20Marc%20Detiffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C5163AE1400074DD17 /* Rossel_facade%20avant_copyright%20Marc%20Detiffe.jpg */; };
+		964E1910163AE1410074DD17 /* RTL%20House%20copyright%20Marc%20Detiffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C6163AE1400074DD17 /* RTL%20House%20copyright%20Marc%20Detiffe.jpg */; };
+		964E1911163AE1410074DD17 /* 0071_DSC3801.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C7163AE1400074DD17 /* 0071_DSC3801.jpg */; };
+		964E1912163AE1410074DD17 /* 162%20Tour.tiff_.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C8163AE1400074DD17 /* 162%20Tour.tiff_.jpg */; };
+		964E1913163AE1410074DD17 /* 0425%20Atomium%2001%20%C2%A9%20www.atomium.be%20-%20SABAM%202012%20-%20Benjamin%20Brolet%20%20_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18C9163AE1400074DD17 /* 0425%20Atomium%2001%20%C2%A9%20www.atomium.be%20-%20SABAM%202012%20-%20Benjamin%20Brolet%20%20_1.jpg */; };
+		964E1914163AE1410074DD17 /* balsamine-01-mfp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18CA163AE1400074DD17 /* balsamine-01-mfp.jpg */; };
+		964E1915163AE1410074DD17 /* CDRCES_20040906_facade-nuit_02.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18CB163AE1400074DD17 /* CDRCES_20040906_facade-nuit_02.JPG */; };
+		964E1916163AE1410074DD17 /* KVS%20-%2080%20-%20%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18CC163AE1400074DD17 /* KVS%20-%2080%20-%20%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */; };
+		964E1917163AE1410074DD17 /* KVS%20A%20-%2001%20-%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18CD163AE1400074DD17 /* KVS%20A%20-%2001%20-%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */; };
+		964E1918163AE1410074DD17 /* _DSC8576%20LR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18CE163AE1400074DD17 /* _DSC8576%20LR.jpg */; };
+		964E1919163AE1410074DD17 /* 00%20%C2%A9%20CONIX%20ARCHITECTS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18CF163AE1400074DD17 /* 00%20%C2%A9%20CONIX%20ARCHITECTS.jpg */; };
+		964E191A163AE1410074DD17 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D0163AE1400074DD17 /* 1.jpg */; };
+		964E191B163AE1410074DD17 /* ARIB%20WAW%20Marcq%20foto01_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D1163AE1400074DD17 /* ARIB%20WAW%20Marcq%20foto01_2.jpg */; };
+		964E191C163AE1410074DD17 /* BBLHEX_20020201_exterieur-vue_05.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D2163AE1400074DD17 /* BBLHEX_20020201_exterieur-vue_05.JPG */; };
+		964E191D163AE1410074DD17 /* COLVER_20020218_exterieur-vue_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D3163AE1400074DD17 /* COLVER_20020218_exterieur-vue_01.jpg */; };
+		964E191E163AE1410074DD17 /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D4163AE1400074DD17 /* d.jpg */; };
+		964E191F163AE1410074DD17 /* Ellipse%20Building1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D5163AE1400074DD17 /* Ellipse%20Building1.jpg */; };
+		964E1920163AE1410074DD17 /* erasme-02_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D6163AE1400074DD17 /* erasme-02_0.jpg */; };
+		964E1921163AE1410074DD17 /* scan01%20copie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D7163AE1400074DD17 /* scan01%20copie.jpg */; };
+		964E1922163AE1410074DD17 /* 0014-DEXI_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D8163AE1400074DD17 /* 0014-DEXI_01.jpg */; };
+		964E1923163AE1410074DD17 /* 283_R24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18D9163AE1400074DD17 /* 283_R24.jpg */; };
+		964E1924163AE1410074DD17 /* 301_R46.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18DA163AE1400074DD17 /* 301_R46.jpg */; };
+		964E1925163AE1410074DD17 /* 407_R07bis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18DB163AE1400074DD17 /* 407_R07bis.jpg */; };
+		964E1926163AE1410074DD17 /* 0512%20W16%2001%20%C2%A9%20Serge%20Brison.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18DC163AE1400074DD17 /* 0512%20W16%2001%20%C2%A9%20Serge%20Brison.jpg */; };
+		964E1927163AE1410074DD17 /* 9003-ZAV_e01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18DD163AE1400074DD17 /* 9003-ZAV_e01.jpg */; };
+		964E1928163AE1410074DD17 /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18DE163AE1400074DD17 /* b.jpg */; };
+		964E1929163AE1410074DD17 /* BRUNOR_20061123_exterieur_02L_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18DF163AE1400074DD17 /* BRUNOR_20061123_exterieur_02L_0.jpg */; };
+		964E192A163AE1410074DD17 /* Vanhaerents04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E0163AE1400074DD17 /* Vanhaerents04.jpg */; };
+		964E192B163AE1410074DD17 /* 057_R01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E1163AE1400074DD17 /* 057_R01.jpg */; };
+		964E192C163AE1410074DD17 /* 501.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E2163AE1400074DD17 /* 501.jpg */; };
+		964E192D163AE1410074DD17 /* 1640_31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E3163AE1400074DD17 /* 1640_31.jpg */; };
+		964E192E163AE1410074DD17 /* 2797_07.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E4163AE1400074DD17 /* 2797_07.JPG */; };
+		964E192F163AE1410074DD17 /* ANGLEEXT2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E5163AE1400074DD17 /* ANGLEEXT2.JPG */; };
+		964E1930163AE1410074DD17 /* BC%20straatgevel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E6163AE1400074DD17 /* BC%20straatgevel.jpg */; };
+		964E1931163AE1410074DD17 /* C1%20-%20Marc-Detiffe-1809_462.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E7163AE1400074DD17 /* C1%20-%20Marc-Detiffe-1809_462.jpg */; };
+		964E1932163AE1410074DD17 /* dakappartement.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E8163AE1400074DD17 /* dakappartement.jpg */; };
+		964E1933163AE1410074DD17 /* DSCF4280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18E9163AE1410074DD17 /* DSCF4280.jpg */; };
+		964E1934163AE1410074DD17 /* IMG_7610.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18EA163AE1410074DD17 /* IMG_7610.JPG */; };
+		964E1935163AE1410074DD17 /* photo5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18EB163AE1410074DD17 /* photo5.jpg */; };
+		964E1936163AE1410074DD17 /* 00%20fa%C3%A7ade.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 964E18EC163AE1410074DD17 /* 00%20fa%C3%A7ade.JPG */; };
+		964E1937163AE1410074DD17 /* 002b%20BRONKS3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18ED163AE1410074DD17 /* 002b%20BRONKS3.jpg */; };
+		964E1938163AE1410074DD17 /* BELVUE_19990617_nuit_r%C3%A9cup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18EE163AE1410074DD17 /* BELVUE_19990617_nuit_r%C3%A9cup.jpg */; };
+		964E1939163AE1410074DD17 /* Erasmehdj%201.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18EF163AE1410074DD17 /* Erasmehdj%201.jpg */; };
+		964E193A163AE1410074DD17 /* IMG_0228_.png in Resources */ = {isa = PBXBuildFile; fileRef = 964E18F0163AE1410074DD17 /* IMG_0228_.png */; };
+		964E193B163AE1410074DD17 /* ULBBIB_20080428_exterieur_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18F1163AE1410074DD17 /* ULBBIB_20080428_exterieur_04.jpg */; };
+		964E193C163AE1410074DD17 /* Arsenal%20Copyright%20Marc%20Detiffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18F2163AE1410074DD17 /* Arsenal%20Copyright%20Marc%20Detiffe.jpg */; };
+		964E193D163AE1410074DD17 /* DEGROOF_20050127_facade-perspective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964E18F3163AE1410074DD17 /* DEGROOF_20050127_facade-perspective.jpg */; };
 		971E742B140E30B9000202EF /* SubGroupButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 971E742A140E30B9000202EF /* SubGroupButton.m */; };
 		974D26DE141E2F2B000B9EF5 /* arrowDoSeeFilterLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D26DA141E2F2B000B9EF5 /* arrowDoSeeFilterLeft.png */; };
 		974D26DF141E2F2B000B9EF5 /* arrowDoSeeFilterLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D26DB141E2F2B000B9EF5 /* arrowDoSeeFilterLeft@2x.png */; };
@@ -5604,6 +5681,83 @@
 		09D2E95915C3120B008A80CE /* WaitScreen_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WaitScreen_iPad@2x.png"; sourceTree = "<group>"; };
 		09F56E431629765E00D7BEE8 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		09F56E441629765E00D7BEE8 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		964E18A4163ACA1B0074DD17 /* CONTEMPARCH_EN.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CONTEMPARCH_EN.xml; sourceTree = "<group>"; };
+		964E18A5163ACA1B0074DD17 /* CONTEMPARCH_FR.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CONTEMPARCH_FR.xml; sourceTree = "<group>"; };
+		964E18A6163ACA1B0074DD17 /* CONTEMPARCH_NL.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CONTEMPARCH_NL.xml; sourceTree = "<group>"; };
+		964E18AA163AE1400074DD17 /* 848-578.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "848-578.jpg"; sourceTree = "<group>"; };
+		964E18AB163AE1400074DD17 /* 1415_14.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1415_14.JPG; sourceTree = "<group>"; };
+		964E18AC163AE1400074DD17 /* 1416_10.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1416_10.JPG; sourceTree = "<group>"; };
+		964E18AD163AE1400074DD17 /* 1769_067.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1769_067.jpg; sourceTree = "<group>"; };
+		964E18AE163AE1400074DD17 /* TNB-1-%20Marie-Franc%CC%A7oise%20Plissart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TNB-1-%20Marie-Franc%CC%A7oise%20Plissart.jpg"; sourceTree = "<group>"; };
+		964E18AF163AE1400074DD17 /* 000007-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "000007-2.jpg"; sourceTree = "<group>"; };
+		964E18B0163AE1400074DD17 /* 0539%20SIBELGA%20II%20081006%2016%20Lowres%20%C2%A9%20Serge%20Brison.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0539%20SIBELGA%20II%20081006%2016%20Lowres%20%C2%A9%20Serge%20Brison.jpg"; sourceTree = "<group>"; };
+		964E18B1163AE1400074DD17 /* 9613-VVL_e01_LN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "9613-VVL_e01_LN.jpg"; sourceTree = "<group>"; };
+		964E18B2163AE1400074DD17 /* BLOMME_20070530_facade_05%20clean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BLOMME_20070530_facade_05%20clean.jpg"; sourceTree = "<group>"; };
+		964E18B3163AE1400074DD17 /* CGR%2085%20%C2%A9%20A2RC%20ARCHITECTS%20-%20G.%20De%20Kinder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CGR%2085%20%C2%A9%20A2RC%20ARCHITECTS%20-%20G.%20De%20Kinder.jpg"; sourceTree = "<group>"; };
+		964E18B4163AE1400074DD17 /* DSCF8802.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSCF8802.jpg; sourceTree = "<group>"; };
+		964E18B5163AE1400074DD17 /* Filip-Dujardin-01-UrsulinesSquare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Filip-Dujardin-01-UrsulinesSquare.jpg"; sourceTree = "<group>"; };
+		964E18B6163AE1400074DD17 /* FLEURI_20040326_facadeCMYK_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FLEURI_20040326_facadeCMYK_01.jpg; sourceTree = "<group>"; };
+		964E18B7163AE1400074DD17 /* Photo%20307_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Photo%20307_0.jpg"; sourceTree = "<group>"; };
+		964E18B8163AE1400074DD17 /* TRM%20-%20J%20Jacobs%2004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRM%20-%20J%20Jacobs%2004.jpg"; sourceTree = "<group>"; };
+		964E18B9163AE1400074DD17 /* ULB%20Auditoire%20Solbosch%201.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ULB%20Auditoire%20Solbosch%201.jpg"; sourceTree = "<group>"; };
+		964E18BA163AE1400074DD17 /* WSL%20-%2016%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WSL%20-%2016%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg"; sourceTree = "<group>"; };
+		964E18BB163AE1400074DD17 /* 01%C2%A9A2RC%20ARCHITECTS%2CJ.%20Jacobs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01%C2%A9A2RC%20ARCHITECTS%2CJ.%20Jacobs.jpg"; sourceTree = "<group>"; };
+		964E18BC163AE1400074DD17 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		964E18BD163AE1400074DD17 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		964E18BE163AE1400074DD17 /* 0235_RIVES%20GAUCHES_IMAGES_A.ZIELONKA_029__MG_0849.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0235_RIVES%20GAUCHES_IMAGES_A.ZIELONKA_029__MG_0849.JPG"; sourceTree = "<group>"; };
+		964E18BF163AE1400074DD17 /* 0631%20BRUT_e08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0631%20BRUT_e08.jpg"; sourceTree = "<group>"; };
+		964E18C0163AE1400074DD17 /* 1508_07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1508_07.jpg; sourceTree = "<group>"; };
+		964E18C1163AE1400074DD17 /* 9534_B%26E_05_LOW.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "9534_B%26E_05_LOW.jpg"; sourceTree = "<group>"; };
+		964E18C2163AE1400074DD17 /* 9701%20POIN_e01bis_60x90.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "9701%20POIN_e01bis_60x90.jpg"; sourceTree = "<group>"; };
+		964E18C3163AE1400074DD17 /* Ingang%20Sint-Pieterskerkstraat%201.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ingang%20Sint-Pieterskerkstraat%201.jpg"; sourceTree = "<group>"; };
+		964E18C4163AE1400074DD17 /* PICT0011.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PICT0011.JPG; sourceTree = "<group>"; };
+		964E18C5163AE1400074DD17 /* Rossel_facade%20avant_copyright%20Marc%20Detiffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rossel_facade%20avant_copyright%20Marc%20Detiffe.jpg"; sourceTree = "<group>"; };
+		964E18C6163AE1400074DD17 /* RTL%20House%20copyright%20Marc%20Detiffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RTL%20House%20copyright%20Marc%20Detiffe.jpg"; sourceTree = "<group>"; };
+		964E18C7163AE1400074DD17 /* 0071_DSC3801.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0071_DSC3801.jpg; sourceTree = "<group>"; };
+		964E18C8163AE1400074DD17 /* 162%20Tour.tiff_.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "162%20Tour.tiff_.jpg"; sourceTree = "<group>"; };
+		964E18C9163AE1400074DD17 /* 0425%20Atomium%2001%20%C2%A9%20www.atomium.be%20-%20SABAM%202012%20-%20Benjamin%20Brolet%20%20_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0425%20Atomium%2001%20%C2%A9%20www.atomium.be%20-%20SABAM%202012%20-%20Benjamin%20Brolet%20%20_1.jpg"; sourceTree = "<group>"; };
+		964E18CA163AE1400074DD17 /* balsamine-01-mfp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "balsamine-01-mfp.jpg"; sourceTree = "<group>"; };
+		964E18CB163AE1400074DD17 /* CDRCES_20040906_facade-nuit_02.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CDRCES_20040906_facade-nuit_02.JPG"; sourceTree = "<group>"; };
+		964E18CC163AE1400074DD17 /* KVS%20-%2080%20-%20%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KVS%20-%2080%20-%20%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg"; sourceTree = "<group>"; };
+		964E18CD163AE1400074DD17 /* KVS%20A%20-%2001%20-%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KVS%20A%20-%2001%20-%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg"; sourceTree = "<group>"; };
+		964E18CE163AE1400074DD17 /* _DSC8576%20LR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "_DSC8576%20LR.jpg"; sourceTree = "<group>"; };
+		964E18CF163AE1400074DD17 /* 00%20%C2%A9%20CONIX%20ARCHITECTS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "00%20%C2%A9%20CONIX%20ARCHITECTS.jpg"; sourceTree = "<group>"; };
+		964E18D0163AE1400074DD17 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		964E18D1163AE1400074DD17 /* ARIB%20WAW%20Marcq%20foto01_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ARIB%20WAW%20Marcq%20foto01_2.jpg"; sourceTree = "<group>"; };
+		964E18D2163AE1400074DD17 /* BBLHEX_20020201_exterieur-vue_05.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BBLHEX_20020201_exterieur-vue_05.JPG"; sourceTree = "<group>"; };
+		964E18D3163AE1400074DD17 /* COLVER_20020218_exterieur-vue_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "COLVER_20020218_exterieur-vue_01.jpg"; sourceTree = "<group>"; };
+		964E18D4163AE1400074DD17 /* d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpg; sourceTree = "<group>"; };
+		964E18D5163AE1400074DD17 /* Ellipse%20Building1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ellipse%20Building1.jpg"; sourceTree = "<group>"; };
+		964E18D6163AE1400074DD17 /* erasme-02_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "erasme-02_0.jpg"; sourceTree = "<group>"; };
+		964E18D7163AE1400074DD17 /* scan01%20copie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "scan01%20copie.jpg"; sourceTree = "<group>"; };
+		964E18D8163AE1400074DD17 /* 0014-DEXI_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0014-DEXI_01.jpg"; sourceTree = "<group>"; };
+		964E18D9163AE1400074DD17 /* 283_R24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 283_R24.jpg; sourceTree = "<group>"; };
+		964E18DA163AE1400074DD17 /* 301_R46.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 301_R46.jpg; sourceTree = "<group>"; };
+		964E18DB163AE1400074DD17 /* 407_R07bis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 407_R07bis.jpg; sourceTree = "<group>"; };
+		964E18DC163AE1400074DD17 /* 0512%20W16%2001%20%C2%A9%20Serge%20Brison.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0512%20W16%2001%20%C2%A9%20Serge%20Brison.jpg"; sourceTree = "<group>"; };
+		964E18DD163AE1400074DD17 /* 9003-ZAV_e01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "9003-ZAV_e01.jpg"; sourceTree = "<group>"; };
+		964E18DE163AE1400074DD17 /* b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b.jpg; sourceTree = "<group>"; };
+		964E18DF163AE1400074DD17 /* BRUNOR_20061123_exterieur_02L_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BRUNOR_20061123_exterieur_02L_0.jpg; sourceTree = "<group>"; };
+		964E18E0163AE1400074DD17 /* Vanhaerents04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vanhaerents04.jpg; sourceTree = "<group>"; };
+		964E18E1163AE1400074DD17 /* 057_R01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 057_R01.jpg; sourceTree = "<group>"; };
+		964E18E2163AE1400074DD17 /* 501.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 501.jpg; sourceTree = "<group>"; };
+		964E18E3163AE1400074DD17 /* 1640_31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1640_31.jpg; sourceTree = "<group>"; };
+		964E18E4163AE1400074DD17 /* 2797_07.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2797_07.JPG; sourceTree = "<group>"; };
+		964E18E5163AE1400074DD17 /* ANGLEEXT2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ANGLEEXT2.JPG; sourceTree = "<group>"; };
+		964E18E6163AE1400074DD17 /* BC%20straatgevel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BC%20straatgevel.jpg"; sourceTree = "<group>"; };
+		964E18E7163AE1400074DD17 /* C1%20-%20Marc-Detiffe-1809_462.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "C1%20-%20Marc-Detiffe-1809_462.jpg"; sourceTree = "<group>"; };
+		964E18E8163AE1400074DD17 /* dakappartement.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dakappartement.jpg; sourceTree = "<group>"; };
+		964E18E9163AE1410074DD17 /* DSCF4280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSCF4280.jpg; sourceTree = "<group>"; };
+		964E18EA163AE1410074DD17 /* IMG_7610.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_7610.JPG; sourceTree = "<group>"; };
+		964E18EB163AE1410074DD17 /* photo5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo5.jpg; sourceTree = "<group>"; };
+		964E18EC163AE1410074DD17 /* 00%20fa%C3%A7ade.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "00%20fa%C3%A7ade.JPG"; sourceTree = "<group>"; };
+		964E18ED163AE1410074DD17 /* 002b%20BRONKS3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "002b%20BRONKS3.jpg"; sourceTree = "<group>"; };
+		964E18EE163AE1410074DD17 /* BELVUE_19990617_nuit_r%C3%A9cup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BELVUE_19990617_nuit_r%C3%A9cup.jpg"; sourceTree = "<group>"; };
+		964E18EF163AE1410074DD17 /* Erasmehdj%201.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Erasmehdj%201.jpg"; sourceTree = "<group>"; };
+		964E18F0163AE1410074DD17 /* IMG_0228_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0228_.png; sourceTree = "<group>"; };
+		964E18F1163AE1410074DD17 /* ULBBIB_20080428_exterieur_04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ULBBIB_20080428_exterieur_04.jpg; sourceTree = "<group>"; };
+		964E18F2163AE1410074DD17 /* Arsenal%20Copyright%20Marc%20Detiffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Arsenal%20Copyright%20Marc%20Detiffe.jpg"; sourceTree = "<group>"; };
+		964E18F3163AE1410074DD17 /* DEGROOF_20050127_facade-perspective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DEGROOF_20050127_facade-perspective.jpg"; sourceTree = "<group>"; };
 		971E7429140E30B9000202EF /* SubGroupButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGroupButton.h; sourceTree = "<group>"; };
 		971E742A140E30B9000202EF /* SubGroupButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGroupButton.m; sourceTree = "<group>"; };
 		974D26DA141E2F2B000B9EF5 /* arrowDoSeeFilterLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowDoSeeFilterLeft.png; sourceTree = "<group>"; };
@@ -6055,6 +6209,80 @@
 		0962C39C161ACFAD0087A357 /* itemimages */ = {
 			isa = PBXGroup;
 			children = (
+				964E18AA163AE1400074DD17 /* 848-578.jpg */,
+				964E18AB163AE1400074DD17 /* 1415_14.JPG */,
+				964E18AC163AE1400074DD17 /* 1416_10.JPG */,
+				964E18AD163AE1400074DD17 /* 1769_067.jpg */,
+				964E18AE163AE1400074DD17 /* TNB-1-%20Marie-Franc%CC%A7oise%20Plissart.jpg */,
+				964E18AF163AE1400074DD17 /* 000007-2.jpg */,
+				964E18B0163AE1400074DD17 /* 0539%20SIBELGA%20II%20081006%2016%20Lowres%20%C2%A9%20Serge%20Brison.jpg */,
+				964E18B1163AE1400074DD17 /* 9613-VVL_e01_LN.jpg */,
+				964E18B2163AE1400074DD17 /* BLOMME_20070530_facade_05%20clean.jpg */,
+				964E18B3163AE1400074DD17 /* CGR%2085%20%C2%A9%20A2RC%20ARCHITECTS%20-%20G.%20De%20Kinder.jpg */,
+				964E18B4163AE1400074DD17 /* DSCF8802.jpg */,
+				964E18B5163AE1400074DD17 /* Filip-Dujardin-01-UrsulinesSquare.jpg */,
+				964E18B6163AE1400074DD17 /* FLEURI_20040326_facadeCMYK_01.jpg */,
+				964E18B7163AE1400074DD17 /* Photo%20307_0.jpg */,
+				964E18B8163AE1400074DD17 /* TRM%20-%20J%20Jacobs%2004.jpg */,
+				964E18B9163AE1400074DD17 /* ULB%20Auditoire%20Solbosch%201.jpg */,
+				964E18BA163AE1400074DD17 /* WSL%20-%2016%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */,
+				964E18BB163AE1400074DD17 /* 01%C2%A9A2RC%20ARCHITECTS%2CJ.%20Jacobs.jpg */,
+				964E18BC163AE1400074DD17 /* 04.jpg */,
+				964E18BD163AE1400074DD17 /* 05.jpg */,
+				964E18BE163AE1400074DD17 /* 0235_RIVES%20GAUCHES_IMAGES_A.ZIELONKA_029__MG_0849.JPG */,
+				964E18BF163AE1400074DD17 /* 0631%20BRUT_e08.jpg */,
+				964E18C0163AE1400074DD17 /* 1508_07.jpg */,
+				964E18C1163AE1400074DD17 /* 9534_B%26E_05_LOW.jpg */,
+				964E18C2163AE1400074DD17 /* 9701%20POIN_e01bis_60x90.jpg */,
+				964E18C3163AE1400074DD17 /* Ingang%20Sint-Pieterskerkstraat%201.jpg */,
+				964E18C4163AE1400074DD17 /* PICT0011.JPG */,
+				964E18C5163AE1400074DD17 /* Rossel_facade%20avant_copyright%20Marc%20Detiffe.jpg */,
+				964E18C6163AE1400074DD17 /* RTL%20House%20copyright%20Marc%20Detiffe.jpg */,
+				964E18C7163AE1400074DD17 /* 0071_DSC3801.jpg */,
+				964E18C8163AE1400074DD17 /* 162%20Tour.tiff_.jpg */,
+				964E18C9163AE1400074DD17 /* 0425%20Atomium%2001%20%C2%A9%20www.atomium.be%20-%20SABAM%202012%20-%20Benjamin%20Brolet%20%20_1.jpg */,
+				964E18CA163AE1400074DD17 /* balsamine-01-mfp.jpg */,
+				964E18CB163AE1400074DD17 /* CDRCES_20040906_facade-nuit_02.JPG */,
+				964E18CC163AE1400074DD17 /* KVS%20-%2080%20-%20%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */,
+				964E18CD163AE1400074DD17 /* KVS%20A%20-%2001%20-%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg */,
+				964E18CE163AE1400074DD17 /* _DSC8576%20LR.jpg */,
+				964E18CF163AE1400074DD17 /* 00%20%C2%A9%20CONIX%20ARCHITECTS.jpg */,
+				964E18D0163AE1400074DD17 /* 1.jpg */,
+				964E18D1163AE1400074DD17 /* ARIB%20WAW%20Marcq%20foto01_2.jpg */,
+				964E18D2163AE1400074DD17 /* BBLHEX_20020201_exterieur-vue_05.JPG */,
+				964E18D3163AE1400074DD17 /* COLVER_20020218_exterieur-vue_01.jpg */,
+				964E18D4163AE1400074DD17 /* d.jpg */,
+				964E18D5163AE1400074DD17 /* Ellipse%20Building1.jpg */,
+				964E18D6163AE1400074DD17 /* erasme-02_0.jpg */,
+				964E18D7163AE1400074DD17 /* scan01%20copie.jpg */,
+				964E18D8163AE1400074DD17 /* 0014-DEXI_01.jpg */,
+				964E18D9163AE1400074DD17 /* 283_R24.jpg */,
+				964E18DA163AE1400074DD17 /* 301_R46.jpg */,
+				964E18DB163AE1400074DD17 /* 407_R07bis.jpg */,
+				964E18DC163AE1400074DD17 /* 0512%20W16%2001%20%C2%A9%20Serge%20Brison.jpg */,
+				964E18DD163AE1400074DD17 /* 9003-ZAV_e01.jpg */,
+				964E18DE163AE1400074DD17 /* b.jpg */,
+				964E18DF163AE1400074DD17 /* BRUNOR_20061123_exterieur_02L_0.jpg */,
+				964E18E0163AE1400074DD17 /* Vanhaerents04.jpg */,
+				964E18E1163AE1400074DD17 /* 057_R01.jpg */,
+				964E18E2163AE1400074DD17 /* 501.jpg */,
+				964E18E3163AE1400074DD17 /* 1640_31.jpg */,
+				964E18E4163AE1400074DD17 /* 2797_07.JPG */,
+				964E18E5163AE1400074DD17 /* ANGLEEXT2.JPG */,
+				964E18E6163AE1400074DD17 /* BC%20straatgevel.jpg */,
+				964E18E7163AE1400074DD17 /* C1%20-%20Marc-Detiffe-1809_462.jpg */,
+				964E18E8163AE1400074DD17 /* dakappartement.jpg */,
+				964E18E9163AE1410074DD17 /* DSCF4280.jpg */,
+				964E18EA163AE1410074DD17 /* IMG_7610.JPG */,
+				964E18EB163AE1410074DD17 /* photo5.jpg */,
+				964E18EC163AE1410074DD17 /* 00%20fa%C3%A7ade.JPG */,
+				964E18ED163AE1410074DD17 /* 002b%20BRONKS3.jpg */,
+				964E18EE163AE1410074DD17 /* BELVUE_19990617_nuit_r%C3%A9cup.jpg */,
+				964E18EF163AE1410074DD17 /* Erasmehdj%201.jpg */,
+				964E18F0163AE1410074DD17 /* IMG_0228_.png */,
+				964E18F1163AE1410074DD17 /* ULBBIB_20080428_exterieur_04.jpg */,
+				964E18F2163AE1410074DD17 /* Arsenal%20Copyright%20Marc%20Detiffe.jpg */,
+				964E18F3163AE1410074DD17 /* DEGROOF_20050127_facade-perspective.jpg */,
 				0962C39D161ACFAD0087A357 /* 10000093-1.jpg */,
 				0962C39E161ACFAD0087A357 /* 1000058-1.jpg */,
 				0962C39F161ACFAD0087A357 /* 1000182-1.jpg */,
@@ -9068,6 +9296,9 @@
 		ADA95FE013DDBBD10077095A /* xml */ = {
 			isa = PBXGroup;
 			children = (
+				964E18A4163ACA1B0074DD17 /* CONTEMPARCH_EN.xml */,
+				964E18A5163ACA1B0074DD17 /* CONTEMPARCH_FR.xml */,
+				964E18A6163ACA1B0074DD17 /* CONTEMPARCH_NL.xml */,
 				ADBB54111488EEA80027AD72 /* ATTRACTIONS_EN.xml */,
 				ADBB54121488EEA80027AD72 /* ATTRACTIONS_FR.xml */,
 				ADBB54131488EEA80027AD72 /* ATTRACTIONS_NL.xml */,
@@ -12347,6 +12578,83 @@
 				0962D689161ACFBC0087A357 /* You_Brussels.jpg in Resources */,
 				09F56E451629765E00D7BEE8 /* iTunesArtwork.png in Resources */,
 				09F56E461629765E00D7BEE8 /* iTunesArtwork@2x.png in Resources */,
+				964E18A7163ACA1B0074DD17 /* CONTEMPARCH_EN.xml in Resources */,
+				964E18A8163ACA1B0074DD17 /* CONTEMPARCH_FR.xml in Resources */,
+				964E18A9163ACA1B0074DD17 /* CONTEMPARCH_NL.xml in Resources */,
+				964E18F4163AE1410074DD17 /* 848-578.jpg in Resources */,
+				964E18F5163AE1410074DD17 /* 1415_14.JPG in Resources */,
+				964E18F6163AE1410074DD17 /* 1416_10.JPG in Resources */,
+				964E18F7163AE1410074DD17 /* 1769_067.jpg in Resources */,
+				964E18F8163AE1410074DD17 /* TNB-1-%20Marie-Franc%CC%A7oise%20Plissart.jpg in Resources */,
+				964E18F9163AE1410074DD17 /* 000007-2.jpg in Resources */,
+				964E18FA163AE1410074DD17 /* 0539%20SIBELGA%20II%20081006%2016%20Lowres%20%C2%A9%20Serge%20Brison.jpg in Resources */,
+				964E18FB163AE1410074DD17 /* 9613-VVL_e01_LN.jpg in Resources */,
+				964E18FC163AE1410074DD17 /* BLOMME_20070530_facade_05%20clean.jpg in Resources */,
+				964E18FD163AE1410074DD17 /* CGR%2085%20%C2%A9%20A2RC%20ARCHITECTS%20-%20G.%20De%20Kinder.jpg in Resources */,
+				964E18FE163AE1410074DD17 /* DSCF8802.jpg in Resources */,
+				964E18FF163AE1410074DD17 /* Filip-Dujardin-01-UrsulinesSquare.jpg in Resources */,
+				964E1900163AE1410074DD17 /* FLEURI_20040326_facadeCMYK_01.jpg in Resources */,
+				964E1901163AE1410074DD17 /* Photo%20307_0.jpg in Resources */,
+				964E1902163AE1410074DD17 /* TRM%20-%20J%20Jacobs%2004.jpg in Resources */,
+				964E1903163AE1410074DD17 /* ULB%20Auditoire%20Solbosch%201.jpg in Resources */,
+				964E1904163AE1410074DD17 /* WSL%20-%2016%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg in Resources */,
+				964E1905163AE1410074DD17 /* 01%C2%A9A2RC%20ARCHITECTS%2CJ.%20Jacobs.jpg in Resources */,
+				964E1906163AE1410074DD17 /* 04.jpg in Resources */,
+				964E1907163AE1410074DD17 /* 05.jpg in Resources */,
+				964E1908163AE1410074DD17 /* 0235_RIVES%20GAUCHES_IMAGES_A.ZIELONKA_029__MG_0849.JPG in Resources */,
+				964E1909163AE1410074DD17 /* 0631%20BRUT_e08.jpg in Resources */,
+				964E190A163AE1410074DD17 /* 1508_07.jpg in Resources */,
+				964E190B163AE1410074DD17 /* 9534_B%26E_05_LOW.jpg in Resources */,
+				964E190C163AE1410074DD17 /* 9701%20POIN_e01bis_60x90.jpg in Resources */,
+				964E190D163AE1410074DD17 /* Ingang%20Sint-Pieterskerkstraat%201.jpg in Resources */,
+				964E190E163AE1410074DD17 /* PICT0011.JPG in Resources */,
+				964E190F163AE1410074DD17 /* Rossel_facade%20avant_copyright%20Marc%20Detiffe.jpg in Resources */,
+				964E1910163AE1410074DD17 /* RTL%20House%20copyright%20Marc%20Detiffe.jpg in Resources */,
+				964E1911163AE1410074DD17 /* 0071_DSC3801.jpg in Resources */,
+				964E1912163AE1410074DD17 /* 162%20Tour.tiff_.jpg in Resources */,
+				964E1913163AE1410074DD17 /* 0425%20Atomium%2001%20%C2%A9%20www.atomium.be%20-%20SABAM%202012%20-%20Benjamin%20Brolet%20%20_1.jpg in Resources */,
+				964E1914163AE1410074DD17 /* balsamine-01-mfp.jpg in Resources */,
+				964E1915163AE1410074DD17 /* CDRCES_20040906_facade-nuit_02.JPG in Resources */,
+				964E1916163AE1410074DD17 /* KVS%20-%2080%20-%20%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg in Resources */,
+				964E1917163AE1410074DD17 /* KVS%20A%20-%2001%20-%20%C2%A9%20A2RC%20Architects%20-%20G.%20De%20Kinder.jpg in Resources */,
+				964E1918163AE1410074DD17 /* _DSC8576%20LR.jpg in Resources */,
+				964E1919163AE1410074DD17 /* 00%20%C2%A9%20CONIX%20ARCHITECTS.jpg in Resources */,
+				964E191A163AE1410074DD17 /* 1.jpg in Resources */,
+				964E191B163AE1410074DD17 /* ARIB%20WAW%20Marcq%20foto01_2.jpg in Resources */,
+				964E191C163AE1410074DD17 /* BBLHEX_20020201_exterieur-vue_05.JPG in Resources */,
+				964E191D163AE1410074DD17 /* COLVER_20020218_exterieur-vue_01.jpg in Resources */,
+				964E191E163AE1410074DD17 /* d.jpg in Resources */,
+				964E191F163AE1410074DD17 /* Ellipse%20Building1.jpg in Resources */,
+				964E1920163AE1410074DD17 /* erasme-02_0.jpg in Resources */,
+				964E1921163AE1410074DD17 /* scan01%20copie.jpg in Resources */,
+				964E1922163AE1410074DD17 /* 0014-DEXI_01.jpg in Resources */,
+				964E1923163AE1410074DD17 /* 283_R24.jpg in Resources */,
+				964E1924163AE1410074DD17 /* 301_R46.jpg in Resources */,
+				964E1925163AE1410074DD17 /* 407_R07bis.jpg in Resources */,
+				964E1926163AE1410074DD17 /* 0512%20W16%2001%20%C2%A9%20Serge%20Brison.jpg in Resources */,
+				964E1927163AE1410074DD17 /* 9003-ZAV_e01.jpg in Resources */,
+				964E1928163AE1410074DD17 /* b.jpg in Resources */,
+				964E1929163AE1410074DD17 /* BRUNOR_20061123_exterieur_02L_0.jpg in Resources */,
+				964E192A163AE1410074DD17 /* Vanhaerents04.jpg in Resources */,
+				964E192B163AE1410074DD17 /* 057_R01.jpg in Resources */,
+				964E192C163AE1410074DD17 /* 501.jpg in Resources */,
+				964E192D163AE1410074DD17 /* 1640_31.jpg in Resources */,
+				964E192E163AE1410074DD17 /* 2797_07.JPG in Resources */,
+				964E192F163AE1410074DD17 /* ANGLEEXT2.JPG in Resources */,
+				964E1930163AE1410074DD17 /* BC%20straatgevel.jpg in Resources */,
+				964E1931163AE1410074DD17 /* C1%20-%20Marc-Detiffe-1809_462.jpg in Resources */,
+				964E1932163AE1410074DD17 /* dakappartement.jpg in Resources */,
+				964E1933163AE1410074DD17 /* DSCF4280.jpg in Resources */,
+				964E1934163AE1410074DD17 /* IMG_7610.JPG in Resources */,
+				964E1935163AE1410074DD17 /* photo5.jpg in Resources */,
+				964E1936163AE1410074DD17 /* 00%20fa%C3%A7ade.JPG in Resources */,
+				964E1937163AE1410074DD17 /* 002b%20BRONKS3.jpg in Resources */,
+				964E1938163AE1410074DD17 /* BELVUE_19990617_nuit_r%C3%A9cup.jpg in Resources */,
+				964E1939163AE1410074DD17 /* Erasmehdj%201.jpg in Resources */,
+				964E193A163AE1410074DD17 /* IMG_0228_.png in Resources */,
+				964E193B163AE1410074DD17 /* ULBBIB_20080428_exterieur_04.jpg in Resources */,
+				964E193C163AE1410074DD17 /* Arsenal%20Copyright%20Marc%20Detiffe.jpg in Resources */,
+				964E193D163AE1410074DD17 /* DEGROOF_20050127_facade-perspective.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

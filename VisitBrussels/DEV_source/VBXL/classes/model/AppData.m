@@ -38,9 +38,9 @@ static AppData *_instance;
 			
             _instance = [[self alloc] init];
 
-            _instance.groups = [[NSMutableArray alloc] initWithObjects:@"TOP10",@"MONUMENT",@"MUSEUM",@"CULTURE",@"ATTRACTIONS",@"SHOPPING",@"MARKET",@"HOTEL",@"BnB",@"AUBERGE",@"BUDGET",@"CITYTRIP",@"RESTO",@"BAR",@"BREAKFAST",@"NIGHTCLUB",@"RESTO_NIGHT",@"LEISURE",@"LIVE_MUSIC",nil];
+            _instance.groups = [[NSMutableArray alloc] initWithObjects:@"TOP10",@"MONUMENT",@"MUSEUM",@"CULTURE",@"ATTRACTIONS",@"SHOPPING",@"MARKET", @"CONTEMPARCH",@"HOTEL",@"BnB",@"AUBERGE",@"BUDGET",@"CITYTRIP",@"RESTO",@"BAR",@"BREAKFAST",@"NIGHTCLUB",@"RESTO_NIGHT",@"LEISURE",@"LIVE_MUSIC",nil];
             
-            _instance.subnavigationitemsdoandsee = [[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"NAVTOP10", nil),NSLocalizedString(@"NAVMONUMENTS", nil),NSLocalizedString(@"NAVMUSEUMS", nil),NSLocalizedString(@"NAVCULTURAL", nil),NSLocalizedString(@"NAVATTRACTIONS", nil),NSLocalizedString(@"NAVSHOPPING", nil),NSLocalizedString(@"NAVMARKETS", nil),nil];
+            _instance.subnavigationitemsdoandsee = [[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"NAVTOP10", nil),NSLocalizedString(@"NAVMONUMENTS", nil),NSLocalizedString(@"NAVMUSEUMS", nil),NSLocalizedString(@"NAVCULTURAL", nil),NSLocalizedString(@"NAVATTRACTIONS", nil),NSLocalizedString(@"NAVSHOPPING", nil),NSLocalizedString(@"NAVMARKETS", nil),NSLocalizedString(@"NAVCONTEMPARCH", nil),nil];
             
             _instance.subnavigationitemseatanddrink = [[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"NAVRESTO", nil),NSLocalizedString(@"NAVBARS", nil),NSLocalizedString(@"NAVBREAKFAST", nil),nil];
             
@@ -48,7 +48,7 @@ static AppData *_instance;
             
             _instance.subnavigationitemssleep = [[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"NAVHOTELS", nil),NSLocalizedString(@"NAVBNB", nil),NSLocalizedString(@"NAVYOUTHHOSTELS", nil),NSLocalizedString(@"NAVBUDGET", nil),NSLocalizedString(@"NAVHOTELPACKS", nil),nil];
             
-            _instance.subnavigationallitems = [[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"NAVTOP10", nil),NSLocalizedString(@"NAVMONUMENTS", nil),NSLocalizedString(@"NAVMUSEUMS",  nil),NSLocalizedString(@"NAVCULTURAL", nil),NSLocalizedString(@"NAVATTRACTIONS", nil),NSLocalizedString(@"NAVSHOPPING", nil),NSLocalizedString(@"NAVMARKETS", nil),NSLocalizedString(@"NAVHOTELS", nil),NSLocalizedString(@"NAVBNB", nil),NSLocalizedString(@"NAVYOUTHHOSTELS", nil),NSLocalizedString(@"NAVBUDGET", nil),NSLocalizedString(@"NAVHOTELPACKS", nil),NSLocalizedString(@"NAVRESTO", nil),NSLocalizedString(@"NAVBARS", nil),NSLocalizedString(@"NAVBREAKFAST", nil),NSLocalizedString(@"NAVNIGHTCLUBS", nil),NSLocalizedString(@"NAVRESTNIGHT", nil),NSLocalizedString(@"NAVLEISURE", nil),NSLocalizedString(@"NAVLIVEMUSIC", nil),nil];
+            _instance.subnavigationallitems = [[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"NAVTOP10", nil),NSLocalizedString(@"NAVMONUMENTS", nil),NSLocalizedString(@"NAVMUSEUMS",  nil),NSLocalizedString(@"NAVCULTURAL", nil),NSLocalizedString(@"NAVATTRACTIONS", nil),NSLocalizedString(@"NAVSHOPPING", nil),NSLocalizedString(@"NAVMARKETS", nil),NSLocalizedString(@"NAVCONTEMPARCH", nill),NSLocalizedString(@"NAVHOTELS", nil),NSLocalizedString(@"NAVBNB", nil),NSLocalizedString(@"NAVYOUTHHOSTELS", nil),NSLocalizedString(@"NAVBUDGET", nil),NSLocalizedString(@"NAVHOTELPACKS", nil),NSLocalizedString(@"NAVRESTO", nil),NSLocalizedString(@"NAVBARS", nil),NSLocalizedString(@"NAVBREAKFAST", nil),NSLocalizedString(@"NAVNIGHTCLUBS", nil),NSLocalizedString(@"NAVRESTNIGHT", nil),NSLocalizedString(@"NAVLEISURE", nil),NSLocalizedString(@"NAVLIVEMUSIC", nil),nil];
             
             _instance.navigationtree = [[NSMutableArray alloc] init];
             
