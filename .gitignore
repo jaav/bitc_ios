@@ -4,3 +4,11 @@
 *.xcuserstate
 
 VisitBrussels/DEV_source/.DS_Store
+
+*.xcscheme
+
+VisitBrussels/DEV_source/VBXL.xcodeproj/xcuserdata/AlfritsJohnRobert.xcuserdatad/xcschemes/xcschememanagement.plist
+
+VisitBrussels/DEV_source/dependencies/MapView/MapView.xcodeproj/xcuserdata/AlfritsJohnRobert.xcuserdatad/xcschemes/xcschememanagement.plist
+
+VisitBrussels/DEV_source/dependencies/Proj4/Proj4.xcodeproj/xcuserdata/AlfritsJohnRobert.xcuserdatad/xcschemes/xcschememanagement.plist

@@ -64,5 +64,5 @@
 
 -(void) setCurrentGroupBasedOnTitle:(NSString*)title;
 -(NSString*) returnGroupNameBasedOnCurrentGroupIndex:(int)index;
-
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL;
 @end

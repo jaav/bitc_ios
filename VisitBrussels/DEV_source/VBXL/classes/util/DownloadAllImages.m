@@ -19,12 +19,12 @@
     
     AppData *data = [AppData sharedInstance];
     [[NSFileManager defaultManager] createDirectoryAtPath:data.rootpathforimages withIntermediateDirectories:YES attributes:nil error:nil];
-    
+    [data addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:data.rootpathforimages]];
     for (int i=0; i<[data.navigationtree count]; i++) {
 
             NSString *newpath = [NSString stringWithFormat:@"%@/%@",data.rootpathforimages,[[data.navigationtree objectAtIndex:i] objectAtIndex:0]];
             [[NSFileManager defaultManager] createDirectoryAtPath:newpath withIntermediateDirectories:YES attributes:nil error:nil];
-        
+            [data addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:newpath]];
     }
     
     for (int i=0; i<[items count]; i++) {

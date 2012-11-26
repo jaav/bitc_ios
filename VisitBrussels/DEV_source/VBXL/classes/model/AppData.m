@@ -30,6 +30,33 @@ static AppData *_instance;
 #pragma mark -
 #pragma mark Singleton Methods
 
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
+{
+    /* 5.0.1
+     assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+     const char* filePath = [[URL path] fileSystemRepresentation];
+     const char* attrName = "com.apple.MobileBackup";
+     
+     u_int8_t attrValue = 1;
+     int result = setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
+     
+     return result == 0;*/
+    
+    //5.1
+    if([[NSFileManager defaultManager] fileExistsAtPath: [URL path]])   {
+        NSError *error = nil;
+        
+        BOOL success = [URL setResourceValue: [NSNumber numberWithBool:YES] forKey: NSURLIsExcludedFromBackupKey error: &error];
+        if(error){
+            NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+        }
+        
+        return success;
+    }
+    
+    return NO;
+}
+
 + (AppData*)sharedInstance
 {
 	@synchronized(self) {

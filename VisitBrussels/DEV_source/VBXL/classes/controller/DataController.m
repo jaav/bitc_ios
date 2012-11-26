@@ -396,6 +396,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
     } else {
         //Create it
         [[NSFileManager defaultManager] createDirectoryAtPath:data.rootpathforencryptedata withIntermediateDirectories:YES attributes:nil error:nil];
+        [data addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:data.rootpathforencryptedata]];
     }
     NSString *datapath = [data.rootpathforencryptedata stringByAppendingPathComponent:@"encr.data"];
 
@@ -415,7 +416,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
         //Directory did not exists
         //Create it
         [[NSFileManager defaultManager] createDirectoryAtPath:data.rootpathfordownloadedxmls withIntermediateDirectories:YES attributes:nil error:nil];
-        
+        [data addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:data.rootpathfordownloadedxmls]];
         //Move the XML files
         NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:data.rootpathforinitialdata error:nil];
         NSLog(@"check for xml directory --> did not exist --> move the files");
