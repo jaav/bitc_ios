@@ -12949,16 +12949,16 @@
 			buildSettings = {
 				ARCHS = armv7;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
