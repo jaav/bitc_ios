@@ -84,11 +84,14 @@ static AppData *_instance;
                 [_instance.navigationtree addObject:array];
             }
             
-            _instance.rootpathfordownloadedxmls = [NSString stringWithFormat:@"%@/%@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0],@"xmls"];
+            //NSString *cacheRootDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+            NSString *cacheRootDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) objectAtIndex:0];
             
-            _instance.rootpathforimages = [NSString stringWithFormat:@"%@/%@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0],@"images"];
+            _instance.rootpathfordownloadedxmls = [NSString stringWithFormat:@"%@/%@",cacheRootDir,@"xmls"];
             
-            _instance.rootpathforencryptedata = [NSString stringWithFormat:@"%@/%@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0],@"encdata"];
+            _instance.rootpathforimages = [NSString stringWithFormat:@"%@/%@",cacheRootDir,@"images"];
+            
+            _instance.rootpathforencryptedata = [NSString stringWithFormat:@"%@/%@",cacheRootDir,@"encdata"];
             
             _instance.serverpathforxmls = SERVER_URL;
             

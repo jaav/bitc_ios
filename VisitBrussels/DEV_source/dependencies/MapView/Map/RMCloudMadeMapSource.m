@@ -40,7 +40,7 @@ NSString * const RMCloudMadeAccessTokenRequestFailed = @"RMCloudMadeAccessTokenR
 + (NSString*)pathForSavedAccessToken
 {
 	NSArray *paths;
-	paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
 	if ([paths count] > 0) // Should only be one...
 	{
 		NSString *cachePath = [paths objectAtIndex:0];
