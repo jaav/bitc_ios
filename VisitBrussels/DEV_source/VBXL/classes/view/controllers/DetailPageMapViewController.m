@@ -176,7 +176,7 @@
          
                          animations:^{
                              if(isPad)
-                                 mapView.frame = CGRectMake(9.0f, 135.0f, 750, 800);
+                                 mapView.frame = CGRectMake(9.0f, 185.0f, 750, 800);
                              else
                                  mapView.frame = CGRectMake(9.0f, 135.0f, 302, 318);
                              
@@ -195,7 +195,7 @@
          
                          animations:^{
                              if(isPad)
-                                 mapView.frame = CGRectMake(9.0f, 173.0f, 750, 800);
+                                 mapView.frame = CGRectMake(9.0f, 225.0f, 750, 800);
                              else
                                  mapView.frame = CGRectMake(9.0f, 165.0f, 302, 318);
                              subGroupDivider.alpha = 1;
@@ -312,7 +312,7 @@
     firstLocation.latitude  = [myitem.latitude floatValue];
     
     if(isPad)
-        mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 135.0f, 750, 800)];
+        mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 185.0f, 750, 800)];
     else
         mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 135.0f, 302, 318)];
     mapView.delegate = self;
@@ -350,7 +350,7 @@
     AppData *data = [AppData sharedInstance];
     
     if(isPad)
-        arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 140, 17*multiplier, 12*multiplier)];
+        arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 185, 17*multiplier, 12*multiplier)];
     else
         arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 140, 17*multiplier, 12*multiplier)];
     
@@ -359,7 +359,7 @@
     arrowLeft.alpha = 0;
     
     if(isPad)
-        arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(721, 140, 17*multiplier, 12*multiplier)];
+        arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(721, 185, 17*multiplier, 12*multiplier)];
     else
         arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(293, 140, 17, 12)];
     arrowRight.image = [UIImage imageNamed:[DataController adjustedImageName:@"arrowDoSeeFilterRight.png"]];
@@ -367,7 +367,7 @@
     arrowRight.alpha = 0;
     
     if(isPad)
-        subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(44, 130, 678, 40)];
+        subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(44, 180, 678, 40)];
     else
         subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(30, 127, 260, 40)];
     

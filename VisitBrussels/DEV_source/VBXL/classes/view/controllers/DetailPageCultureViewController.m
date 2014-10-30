@@ -117,7 +117,9 @@
     
     NSDictionary *options = @{ NSFontAttributeName: textview.font };
     CGRect frame = textview.frame;
-    CGRect boundingRect = [textview.text boundingRectWithSize:CGSizeMake(285.0, NSIntegerMax)
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width - 40;
+    CGRect boundingRect = [textview.text boundingRectWithSize:CGSizeMake(width, NSIntegerMax)
                                                       options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                                    attributes:options context:nil];
     frame.size.height = boundingRect.size.height + 44;
@@ -204,7 +206,7 @@
     for (int i=0; i<[btnArray count]; i++) {
         UIButton *theButton = [btnArray objectAtIndex:i];
         [scrollView addSubview:theButton];
-        theButton.frame = CGRectMake(((isPad?69:20)+(i*75)), imageView.frame.origin.y+imageView.frame.size.height+15, 64, 30);
+        theButton.frame = CGRectMake(((isPad?69:20)+(i*75)), imageView.frame.origin.y+imageView.frame.size.height+70, 64, 30);
     }
 }
 

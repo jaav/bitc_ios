@@ -91,7 +91,9 @@
     
     NSDictionary *options = @{ NSFontAttributeName: textview.font };
     CGRect frame = textview.frame;
-    CGRect boundingRect = [textview.text boundingRectWithSize:CGSizeMake(285.0, NSIntegerMax)
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width - 40;
+    CGRect boundingRect = [textview.text boundingRectWithSize:CGSizeMake(width, NSIntegerMax)
                                                       options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                                    attributes:options context:nil];
     frame.size.height = boundingRect.size.height + 44;
