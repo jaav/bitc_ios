@@ -27,8 +27,6 @@
     BackButton                  *btnBack;
 	
 	UISearchDisplayController	*searchDisplayController;
-    
-    id <SearchViewControllerDelegate> delegate;
 
 }
 
@@ -37,7 +35,7 @@
 @property (nonatomic, retain) NSMutableArray *filteredListContent;
 @property (nonatomic, retain) UISearchDisplayController	*searchDisplayController;
 @property (nonatomic, retain) BackButton *btnBack;
-@property (nonatomic,assign) id delegate;
+@property (nonatomic,assign) id <SearchViewControllerDelegate> delegate;
 
 
 

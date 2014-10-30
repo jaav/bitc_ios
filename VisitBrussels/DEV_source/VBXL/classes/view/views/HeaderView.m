@@ -14,17 +14,6 @@
 @synthesize logoView;
 @synthesize headerSet;
 
-
-#pragma mark - Memory Management
-
-- (void)dealloc
-{
-    [headerView release];
-    [logoView release];
-    [headerSet release];
-    [super dealloc];
-}
-
 #pragma mark - View lifecycle
 
 - (id)initWithFrame:(CGRect)frame

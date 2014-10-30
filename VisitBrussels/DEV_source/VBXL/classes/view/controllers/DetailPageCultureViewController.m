@@ -43,37 +43,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [scrollView release];
-    [textview release];
-    [imageView release];
-    
-    [self.poiTitle release];
-    [self.poiAdress release];
-    [self.poiCity release];
-    [self.poiFromDate release];
-    [self.poiToDate release];
-    [self.myitem release];
-    [self.btnBack release];
-    [btnCall release];
-    [btnMap release];
-    [btnSite release];
-    [super dealloc];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    [self.poiTitle release];
-    [self.poiAdress release];
-    [self.poiCity  release];
-    [self.poiFromDate release];
-    [self.poiToDate release];
-}
-
-
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -108,8 +77,6 @@
     //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
     self.navigationItem.leftBarButtonItem = customBarItem;
-    
-    [customBarItem release];
 }
 
 -(void)backToHome
@@ -148,12 +115,14 @@
     self.poiFromDate.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"DATEOFSTART", nil), [formatter stringFromDate:fromDate]];
     self.poiToDate.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"DATEOFEND", nil), [formatter stringFromDate:toDate]];
     
-    [formatter release];
-
+    NSDictionary *options = @{ NSFontAttributeName: textview.font };
     CGRect frame = textview.frame;
-    frame.size.height = textview.contentSize.height;
-    textview.frame = frame;
-    
+    CGRect boundingRect = [textview.text boundingRectWithSize:CGSizeMake(285.0, NSIntegerMax)
+                                                      options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                                   attributes:options context:nil];
+    frame.size.height = boundingRect.size.height + 44;
+    [textview setFrame:frame];
+
     if(isPad){
         int scrollHeight = textview.frame.origin.y + textview.frame.size.height;
         
@@ -237,9 +206,6 @@
         [scrollView addSubview:theButton];
         theButton.frame = CGRectMake(((isPad?69:20)+(i*75)), imageView.frame.origin.y+imageView.frame.size.height+15, 64, 30);
     }
-    
-    [btnArray release];
-    
 }
 
 -(void)gotoMap
@@ -247,7 +213,6 @@
     DetailPageMapViewController *detailpage = [[DetailPageMapViewController alloc] initWithNibName:[DataController adjustedNibName:@"DetailPageMapViewController"] bundle:nil andItem:self.myitem];
     [detailpage setTitle:self.title];
     [self.navigationController pushViewController:detailpage animated:YES];
-    [detailpage release];
     
 }
 
@@ -255,7 +220,6 @@
     CustomWebViewController *webview = [[CustomWebViewController alloc] initWithNibName:[DataController adjustedNibName:@"CustomWebViewController"] bundle:nil anURL: [DeHTMLFormatter reformatURLForBookingDotCom:myitem.website]];
     [webview setTitle:@"Browser"];
     [self.navigationController pushViewController:webview animated:YES];
-    [webview release];
 }
 
 -(void)callMe {
@@ -263,7 +227,6 @@
     NSString *phoneStr = [[NSString alloc] initWithFormat:@"tel:%@",myitem.phone];
     NSURL *phoneURL = [NSURL URLWithString: [phoneStr stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
     [[UIApplication sharedApplication] openURL:phoneURL];
-    [phoneStr release];
 }
 
 @end

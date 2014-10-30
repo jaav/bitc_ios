@@ -58,27 +58,6 @@ static DataController *_instance;
     return self;	
 }
 
-- (id)retain
-{	
-    return self;	
-}
-
-- (unsigned)retainCount
-{
-    return UINT_MAX;  //denotes an object that cannot be released
-}
-
-- (void)release
-{
-    //do nothing
-}
-
-- (id)autorelease
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:_instance];
-    return self;	
-}
-
 #pragma mark -
 #pragma mark Custom Methods
 
@@ -110,8 +89,6 @@ static DataController *_instance;
     
     NSLog(@"Categ count = %d, return count = %d",[categ count],[returnvalues count]);
     
-    [formatter release];
-    
     return returnvalues;
 }
 
@@ -125,8 +102,7 @@ static DataController *_instance;
     if (buttonIndex == 1) {
          NSMutableArray *myaar = [self checkDataDateStampForCurrentLanguage];
          Services *service = [Services sharedInstance];
-         [service loadXMLBasedOnLanguage:myaar]; 
-         [myaar release];
+         [service loadXMLBasedOnLanguage:myaar];
     } else {
         VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
         [notif startApp];
@@ -329,15 +305,12 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
                 }
                 
                 myitem.cuisines = [NSMutableArray arrayWithArray:cuisines];
-                
-                [cuisines release];
             
             }
             
             //NSLog(@"item %@",[myitem title]);
             
             [newcat.items addObject:myitem];
-            [myitem release];
             
             item = [TBXML nextSiblingNamed:@"item" searchFromElement:item];
         }
@@ -367,10 +340,8 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
             Categorie *inccatmycat = [self parseXML:root];
           
             [categories addObject:inccatmycat];
-            [inccatmycat release];
         }
     }
-    [xmlstoparse release];
     return categories;
 }
 
@@ -384,7 +355,6 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
         NSURL *url = [NSURL fileURLWithPath:filepath];
         [[NSFileManager defaultManager] removeItemAtURL:url error:nil];
     }
-    [xmlfiles release];
 }
 
 
@@ -455,13 +425,11 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"AVTITLE", nil) message:NSLocalizedString(@"AVMESSAGE", nil) delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
          alert.delegate = self;
          [alert show];
-         [alert release];
      } else {
           NSLog(@"check for outdated files --> no outdated files found --> start app");
          VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
          [notif startApp];
      }
-     [myaar release];
 }
 
 
@@ -507,7 +475,6 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
     } else {
         NSLog(@"no xml to parse --> end parsing sequence");
     }
-    [categoperies release];
 }
 
 -(void) xmlfilesAreDownloaded {
@@ -528,7 +495,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
 }
 
 -(NSMutableArray*) returnAllItems {
-    NSMutableArray *returnarray = [[[NSMutableArray alloc] init ] autorelease];
+    NSMutableArray *returnarray = [[NSMutableArray alloc] init ];
     CategoriesHolder *holder = [CategoriesHolder sharedInstance];
     NSString *preferredLang = [[[NSLocale preferredLanguages] objectAtIndex:0] uppercaseString];
     

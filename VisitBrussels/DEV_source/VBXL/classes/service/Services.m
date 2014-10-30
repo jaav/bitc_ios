@@ -56,30 +56,6 @@ static Services *_instance;
     return self;	
 }
 
-- (id)retain
-{	
-    return self;	
-}
-
-- (unsigned)retainCount
-{
-    return UINT_MAX;  //denotes an object that cannot be released
-}
-
-- (void)release
-{   
-    [networkQueue release];
-
-    //do nothing
-}
-
-- (id)autorelease
-{
-    [networkQueue release];
-    [connectedcallback release];
-    return self;	
-}
-
 #pragma mark -
 #pragma mark Custom Methods
 
@@ -106,9 +82,6 @@ static Services *_instance;
 	[[self networkQueue] setRequestDidFinishSelector:@selector(requestFinished:)];
 	[[self networkQueue] setRequestDidFailSelector:@selector(requestFailed:)];
 	[[self networkQueue] setQueueDidFinishSelector:@selector(queueFinished:)];
-    
-    if(xmlArray)
-        [xmlArray release];
     
     self.xmlArray = [NSMutableArray array];
     
@@ -254,7 +227,6 @@ static Services *_instance;
             
             DownloadImageOperation *op = [[DownloadImageOperation alloc] initWithArray:downloadArray];
             [operationQueue addOperation:op];
-            [op release];
         } else {
             [self downloadImageCompleteAll:[NSDictionary dictionary]];
         }

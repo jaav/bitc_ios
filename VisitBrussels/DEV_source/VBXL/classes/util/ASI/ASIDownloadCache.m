@@ -26,7 +26,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	self = [super init];
 	[self setShouldRespectCacheControlHeaders:YES];
 	[self setDefaultCachePolicy:ASIUseDefaultCachePolicy];
-	[self setAccessLock:[[[NSRecursiveLock alloc] init] autorelease]];
+	[self setAccessLock:[[NSRecursiveLock alloc] init]];
 	return self;
 }
 
@@ -40,17 +40,10 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	return sharedCache;
 }
 
-- (void)dealloc
-{
-	[storagePath release];
-	[accessLock release];
-	[super dealloc];
-}
-
 - (NSString *)storagePath
 {
 	[[self accessLock] lock];
-	NSString *p = [[storagePath retain] autorelease];
+	NSString *p = storagePath;
 	[[self accessLock] unlock];
 	return p;
 }
@@ -61,10 +54,9 @@ static NSString *permanentCacheFolder = @"PermanentStore";
    
 	[[self accessLock] lock];
 	[self clearCachedResponsesForStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
-	[storagePath release];
-	storagePath = [path retain];
+	storagePath = path;
     
-    NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
 
 	BOOL isDirectory = NO;
 	NSArray *directories = [NSArray arrayWithObjects:path,[path stringByAppendingPathComponent:sessionCacheFolder],[path stringByAppendingPathComponent:permanentCacheFolder],nil];
@@ -119,7 +111,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		[[request responseData] writeToFile:dataPath atomically:NO];
 	} else if ([request downloadDestinationPath] && ![[request downloadDestinationPath] isEqualToString:dataPath]) {
 		NSError *error = nil;
-		[[[[NSFileManager alloc] init] autorelease] copyItemAtPath:[request downloadDestinationPath] toPath:dataPath error:&error];
+        [[[NSFileManager alloc] init] copyItemAtPath:[request downloadDestinationPath] toPath:dataPath error:nil];
 	}
 	[[self accessLock] unlock];
 }
@@ -155,7 +147,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		extension = @"html";
 	}
 
-	NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
+	NSFileManager *fileManager = [[NSFileManager alloc] init];
 
 	// Look in the session store
 	NSString *path = [[self storagePath] stringByAppendingPathComponent:sessionCacheFolder];
@@ -183,7 +175,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		return nil;
 	}
 
-	NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
+	NSFileManager *fileManager = [[NSFileManager alloc] init];
 
 	// Look in the session store
 	NSString *path = [[self storagePath] stringByAppendingPathComponent:sessionCacheFolder];
@@ -256,7 +248,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		return;
 	}
 
-	NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
+	NSFileManager *fileManager = [[NSFileManager alloc] init];
 	[fileManager removeItemAtPath:cachedHeadersPath error:NULL];
 	[fileManager removeItemAtPath:dataPath error:NULL];
 	[[self accessLock] unlock];
@@ -312,7 +304,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 				[scanner scanDouble:&maxAge];
 
 				NSDate *fetchDate = [ASIHTTPRequest dateFromRFC1123String:[cachedHeaders objectForKey:@"X-ASIHTTPRequest-Fetch-date"]];
-				NSDate *expiryDate = [[[NSDate alloc] initWithTimeInterval:maxAge sinceDate:fetchDate] autorelease];
+				NSDate *expiryDate = [[NSDate alloc] initWithTimeInterval:maxAge sinceDate:fetchDate];
 
 				if ([expiryDate timeIntervalSinceNow] >= 0) {
 					[[self accessLock] unlock];
@@ -372,7 +364,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	}
 	NSString *path = [[self storagePath] stringByAppendingPathComponent:(storagePolicy == ASICacheForSessionDurationCacheStoragePolicy ? sessionCacheFolder : permanentCacheFolder)];
 
-	NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
+	NSFileManager *fileManager = [[NSFileManager alloc] init];
 
 	BOOL isDirectory = NO;
 	BOOL exists = [fileManager fileExistsAtPath:path isDirectory:&isDirectory];
@@ -435,8 +427,8 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	NSMutableDictionary *threadDict = [[NSThread currentThread] threadDictionary];
 	NSDateFormatter *dateFormatter = [threadDict objectForKey:@"ASIDownloadCacheDateFormatter"];
 	if (dateFormatter == nil) {
-		dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-		[dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease]];
+		dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
 		[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 		[dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss 'GMT'"];
 		[threadDict setObject:dateFormatter forKey:@"ASIDownloadCacheDateFormatter"];

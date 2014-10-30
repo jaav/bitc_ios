@@ -23,16 +23,9 @@
     return self;
 }
 
-- (void)dealloc
-{
-	[_accessoryColor release];
-	[_highlightedColor release];
-    [super dealloc];
-}
-
 + (CustomAccessoryDisclosureArrow *)accessoryWithColor:(UIColor *)color
 {
-	CustomAccessoryDisclosureArrow *ret = [[[CustomAccessoryDisclosureArrow alloc] initWithFrame:CGRectMake(0, 0, 11.0, 15.0)] autorelease];
+	CustomAccessoryDisclosureArrow *ret = [[CustomAccessoryDisclosureArrow alloc] initWithFrame:CGRectMake(0, 0, 11.0, 15.0)];
 	ret.accessoryColor = color;
     
 	return ret;

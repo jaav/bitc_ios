@@ -22,23 +22,6 @@
 @synthesize dataSet;
 @synthesize highlightColor;
 
-#pragma mark - Memory Management
-- (void)dealloc {
-    [dataSet release];
-    [btnBack release];
-    [myTableView release];
-    [highlightColor release];
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -69,7 +52,12 @@
 
 #pragma mark - Config Methods
 -(void)configTableView {
-    self.myTableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, (self.view.frame.size.height)-(self.navigationController.navigationBar.frame.size.height))] autorelease];
+    int i = 1;
+    if([self isIPhone4]){
+        i = 3;
+    }
+    
+    self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - (self.navigationController.navigationBar.frame.size.height * i))];
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
@@ -82,7 +70,6 @@
     //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
     self.navigationItem.leftBarButtonItem = customBarItem;
-    [customBarItem release];
 }
 
 -(void)backToHome {
@@ -126,7 +113,7 @@
     
     SizableImageCell *cell = (SizableImageCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[SizableImageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[SizableImageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         
         if ([[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"RESTO"] || [[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"SHOPPING"] || [[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"CITYTRIP"]) {
             cell.imageheight = isPad?120:60;
@@ -142,7 +129,7 @@
     // Configure the cell...
     Item *item = nil;
     item = [self.dataSet objectAtIndex:indexPath.row];
-    
+ 
     cell.textLabel.text = item.title;
     
     if ([item.parentgroup isEqualToString:@"CULTURE"]) {
@@ -157,14 +144,16 @@
             [formatter setDateFormat:@"dd/MM/YYYY"];
             
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@",[formatter stringFromDate:fromDate], [formatter stringFromDate:toDate]];
-            
-            [formatter release];
     }
     
     [cell.textLabel setFont:[UIFont boldSystemFontOfSize:isPad?30:15]];
     cell.textLabel.textColor = [UIColor colorWithRed:(62.0 / 255.0) green:(62.0 / 255.0) blue:(62.0 / 255.0) alpha: 1];
     
-    cell.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:highlightColor]] autorelease];
+    CGRect textFrame = cell.textLabel.frame;
+    textFrame.size.width = 320;
+    [cell.textLabel setFrame:textFrame];
+    
+    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:highlightColor]];
     
     if (![item.imagefilename isEqualToString:@""] && item.imagefilename != NULL) {
         
@@ -207,44 +196,48 @@
         DetailPageBBViewController *detailpage = [[DetailPageBBViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageBBViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else if ([item.parentgroup isEqualToString:@"CULTURE"]) {
         DetailPageCultureViewController *detailpage = [[DetailPageCultureViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageCultureViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else if ([item.parentgroup isEqualToString:@"BREAKFAST"]) {
         DetailViewBreakfastViewController *detailpage = [[DetailViewBreakfastViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageBreakfastViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else if ([item.parentgroup isEqualToString:@"CITYTRIP"]) {
         DetailPageCitytripsViewController *detailpage = [[DetailPageCitytripsViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageCitytripsViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else if ([item.parentgroup isEqualToString:@"WALK"]) {
         DetailPageWalksViewController *detailpage = [[DetailPageWalksViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageWalksViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else if ([item.parentgroup isEqualToString:@"OG_TOUR"]) {
         DetailPageWalksViewController *detailpage = [[DetailPageWalksViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageWalksViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else if ([item.parentgroup isEqualToString:@"RESTO"]) {
         DetailPageRestoViewController *detailpage = [[DetailPageRestoViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageRestoViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release]; 
     }else{
         DetailPageViewController *detailpage = [[DetailPageViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageViewController"] bundle:nil item:item];
         [detailpage setTitle:item.title];
         [self.navigationController pushViewController:detailpage animated:YES];
-        [detailpage release];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+-(BOOL)isIPhone5{
+    if ([[UIScreen mainScreen] bounds].size.height==568)
+        return YES;
+    return NO;
+}
+
+-(BOOL)isIPhone4{
+    if ([[UIScreen mainScreen] bounds].size.height==480)
+        return YES;
+    return NO;
 }
 
 @end
@@ -258,6 +251,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.frame = CGRectMake(0,0,imagewidth,imageheight);
-    self.textLabel.frame = CGRectMake(imagewidth+10,self.textLabel.frame.origin.y,self.textLabel.frame.size.width,self.textLabel.frame.size.height);
+    self.textLabel.frame = CGRectMake(imagewidth+10,self.textLabel.frame.origin.y,self.textLabel.frame.size.width + 30,self.textLabel.frame.size.height);
 }
 @end

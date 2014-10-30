@@ -17,22 +17,11 @@
 
 #pragma mark - Memory Management
 
-- (void)dealloc
-{
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [_window release];
-    [_viewController release];
-
-    [super dealloc];
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
  
     UINavigationController *categoryController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    self.window.rootViewController = categoryController.visibleViewController;
-    [self.window addSubview:categoryController.view];
+    self.window.rootViewController = categoryController;
+    //[self.window addSubview:categoryController.view];
     [self.window makeKeyAndVisible];
     
     DataController *datacontroller = [DataController sharedInstance];

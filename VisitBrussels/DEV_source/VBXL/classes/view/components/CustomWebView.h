@@ -14,7 +14,6 @@
 	UIWebView *myview;
 	UINavigationBar *bar;
 	NSString *internetReachability;
-	NSTimer *repeatingTimer;
 	BOOL gotInternet;
     
     NSString *myurl;

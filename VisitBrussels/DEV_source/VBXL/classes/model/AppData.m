@@ -123,22 +123,6 @@ static AppData *_instance;
     return self;	
 }
 
-- (id)retain
-{	
-    return self;	
-}
-
-- (unsigned)retainCount
-{
-    return UINT_MAX;  //denotes an object that cannot be released
-}
-
-- (void)release
-{
-    //do nothing
-}
-
-
 -(void) setCurrentGroupBasedOnTitle:(NSString*)title {
     for (int i=0; i<[subnavigationallitems count]; i++) {
         if ([title isEqualToString:[subnavigationallitems objectAtIndex:i] ]) {
@@ -150,22 +134,6 @@ static AppData *_instance;
 -(NSString*) returnGroupNameBasedOnCurrentGroupIndex:(int)index{
     
     return [groups objectAtIndex:index];
-}
-
-
-- (id)autorelease {
-    [subnavigationallitems release];
-    [navigationtree release];
-    [subnavigationitemseatanddrink release];
-    [subnavigationitemsdoandsee release];
-    [subnavigationitemsnightlife release];
-    [subnavigationitemssleep release];
-    [groups release];
-    [serverpathforxmls release];
-    [rootpathforinitialdata release];
-    [rootpathfordownloadedxmls release];
-    [rootpathforencryptedata release];
-    return self;
 }
 
 #pragma mark -

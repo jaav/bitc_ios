@@ -34,49 +34,6 @@
 @synthesize btnSettings;
 @synthesize loadingView, progress1, progress2, label1, label2, loadingTitleLabel;
 
-#pragma mark - Memory Management
-
-- (void)dealloc {
-    
-    [foreground release];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [vbxlHeaderView release];
-    [subCategoryTableViewController release];
-    [searchViewController release];
-    [mapViewController release];
-    
-    [btnAroundMe release];
-    [btnDoSee release];
-    [btnEatDrink release];
-    [btnNightLife release];
-    [btnSleep release];
-    [btnSearch release];
-    [btnSettings release];
-    
-    [super dealloc];
-}
-
-- (void)viewDidUnload
-{
-    self.btnAroundMe = nil;
-    self.btnDoSee = nil;
-    self.btnEatDrink = nil;
-    self.btnNightLife = nil;
-    self.btnSleep = nil;
-    self.btnSearch = nil;
-    self.btnSettings = nil;
-    self.loadingView = nil;
-    self.progress1 = nil;
-    self.progress2 = nil;
-    self.label1 = nil;
-    self.label2 = nil;
-    self.loadingTitleLabel = nil;
-    
-    [super viewDidUnload];
-
-}
-
-
 - (void)didReceiveMemoryWarning {
     NSLog(@"mainview did recieve memory warning");
     // Releases the view if it doesn't have a superview.
@@ -104,7 +61,6 @@
         self.view.userInteractionEnabled = TRUE;
     
         [foreground removeFromSuperview];
-        [foreground release];
     
         /*
         DownloadAllImages *down = [[DownloadAllImages alloc] init];
@@ -230,7 +186,7 @@
 #pragma mark - Create View Methods
 -(void)createListView:(UIButton *)fromButton {
     
-    subCategoryTableViewController = [[SubCategoryTableViewController alloc] initWithNibName:[DataController adjustedNibName:@"SubCategoryTableViewController"] bundle:nil];
+    self.subCategoryTableViewController = [[SubCategoryTableViewController alloc] initWithNibName:[DataController adjustedNibName:@"SubCategoryTableViewController"] bundle:nil];
     
     [subCategoryTableViewController setDataSet:[self retrieveDataSet:fromButton]];
     
@@ -238,10 +194,6 @@
     [subCategoryTableViewController setTitle:[self retrieveListTitle:fromButton]];
     
     [self.navigationController pushViewController:subCategoryTableViewController animated:YES];
-    
-    
-    // release
-    [subCategoryTableViewController release];
 }
 
 
@@ -284,10 +236,9 @@
 {
     NSLog(@"create mapview");
     
-    mapViewController = [[MapViewController alloc]initWithNibName:[DataController adjustedNibName:@"MapViewController"] bundle:nil];
+    self.mapViewController = [[MapViewController alloc] initWithNibName:[DataController adjustedNibName:@"MapViewController"] bundle:nil];
     [mapViewController setTitle:[self retrieveListTitle:btnAroundMe]];    
     [self.navigationController pushViewController:mapViewController animated:YES];
-    [mapViewController release];
 }
 
 -(void)createSearchView
@@ -296,7 +247,7 @@
     searchViewController = [[SearchViewController alloc]initWithNibName:[DataController adjustedNibName:@"SearchViewController"] bundle:nil];
     searchViewController.myTableView.backgroundColor = [UIColor clearColor];
     searchViewController.delegate = self;
-    
+    searchViewController.view.frame = self.view.bounds;
     //[self.navigationController pushViewController:searchViewController animated:YES];
     [self.view addSubview:searchViewController.view];
     
@@ -310,7 +261,7 @@
 }
 
 -(void)searchViewLoaded {
-    [searchViewController release];
+
 }
 
 #pragma mark - SearchViewControllerDelegate Methods
@@ -319,7 +270,6 @@
     DetailPageViewController *detailpage = [[DetailPageViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageViewController"] bundle:nil item:clickedItem];
     [detailpage setTitle:clickedItem.title];
     [self.navigationController pushViewController:detailpage animated:YES];
-    [detailpage release];
 }
 
 @end

@@ -30,7 +30,7 @@
 #pragma mark utilities
 - (NSString*)encodeURL:(NSString *)string
 {
-	NSString *newString = NSMakeCollectable([(NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding([self stringEncoding])) autorelease]);
+	NSString *newString = (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding([self stringEncoding]));
 	if (newString) {
 		return newString;
 	}
@@ -41,7 +41,7 @@
 
 + (id)requestWithURL:(NSURL *)newURL
 {
-	return [[[self alloc] initWithURL:newURL] autorelease];
+	return [[self alloc] initWithURL:newURL];
 }
 
 - (id)initWithURL:(NSURL *)newURL
@@ -50,17 +50,6 @@
 	[self setPostFormat:ASIURLEncodedPostFormat];
 	[self setStringEncoding:NSUTF8StringEncoding];
 	return self;
-}
-
-- (void)dealloc
-{
-#if DEBUG_FORM_DATA_REQUEST
-	[debugBodyString release]; 
-#endif
-	
-	[postData release];
-	[fileData release];
-	[super dealloc];
 }
 
 #pragma mark setup request
@@ -102,7 +91,7 @@
 	// If data is a path to a local file
 	if ([data isKindOfClass:[NSString class]]) {
 		BOOL isDirectory = NO;
-		BOOL fileExists = [[[[NSFileManager alloc] init] autorelease] fileExistsAtPath:(NSString *)data isDirectory:&isDirectory];
+		BOOL fileExists = [[[NSFileManager alloc] init] fileExistsAtPath:(NSString *)data isDirectory:&isDirectory];
 		if (!fileExists || isDirectory) {
 			[self failWithError:[NSError errorWithDomain:NetworkRequestErrorDomain code:ASIInternalErrorWhileBuildingRequestType userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"No file exists at %@",data],NSLocalizedDescriptionKey,nil]]];
 		}
@@ -337,8 +326,8 @@
 - (id)copyWithZone:(NSZone *)zone
 {
 	ASIFormDataRequest *newRequest = [super copyWithZone:zone];
-	[newRequest setPostData:[[[self postData] mutableCopyWithZone:zone] autorelease]];
-	[newRequest setFileData:[[[self fileData] mutableCopyWithZone:zone] autorelease]];
+	[newRequest setPostData:[[self postData] mutableCopyWithZone:zone]];
+	[newRequest setFileData:[[self fileData] mutableCopyWithZone:zone]];
 	[newRequest setPostFormat:[self postFormat]];
 	[newRequest setStringEncoding:[self stringEncoding]];
 	[newRequest setRequestMethod:[self requestMethod]];

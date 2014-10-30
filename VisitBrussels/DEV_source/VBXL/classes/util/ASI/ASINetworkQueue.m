@@ -29,17 +29,7 @@
 
 + (id)queue
 {
-	return [[[self alloc] init] autorelease];
-}
-
-- (void)dealloc
-{
-	//We need to clear the queue on any requests that haven't got around to cleaning up yet, as otherwise they'll try to let us know if something goes wrong, and we'll be long gone by then
-	for (ASIHTTPRequest *request in [self operations]) {
-		[request setQueue:nil];
-	}
-	[userInfo release];
-	[super dealloc];
+	return [[self alloc] init];
 }
 
 - (void)setSuspended:(BOOL)suspend
@@ -318,7 +308,7 @@
 	[newQueue setDownloadProgressDelegate:[self downloadProgressDelegate]];
 	[newQueue setShouldCancelAllRequestsOnFailure:[self shouldCancelAllRequestsOnFailure]];
 	[newQueue setShowAccurateProgress:[self showAccurateProgress]];
-	[newQueue setUserInfo:[[[self userInfo] copyWithZone:zone] autorelease]];
+	[newQueue setUserInfo:[[self userInfo] copyWithZone:zone]];
 	return newQueue;
 }
 

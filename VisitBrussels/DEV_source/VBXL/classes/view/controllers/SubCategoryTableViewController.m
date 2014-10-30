@@ -18,26 +18,9 @@
 
 
 @implementation SubCategoryTableViewController
-
-
 @synthesize myTableView;
 @synthesize btnBack;
 @synthesize dataSet;
-
-#pragma mark - Memory Management
-- (void)dealloc
-{
-    [dataSet release];
-    [btnBack release];
-    [myTableView release];
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
@@ -64,7 +47,7 @@
 #pragma mark - Config Methods
 -(void)configTableView {
     
-    self.myTableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, (self.view.frame.size.height)-(self.navigationController.navigationBar.frame.size.height))] autorelease];
+    self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, (self.view.frame.size.height)-(self.navigationController.navigationBar.frame.size.height))];
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
@@ -80,7 +63,6 @@
     //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
     self.navigationItem.leftBarButtonItem = customBarItem;
-    [customBarItem release];
 }
 
 -(void)backToHome
@@ -130,7 +112,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
@@ -140,7 +122,7 @@
     [cell.textLabel setFont:[UIFont boldSystemFontOfSize:isPad?30:15]];
     cell.textLabel.textColor = [UIColor colorWithRed:(62.0 / 255.0) green:(62.0 / 255.0) blue:(62.0 / 255.0) alpha: 1];
     
-    cell.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:[self retrieveCellHighLight]]] autorelease];
+    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self retrieveCellHighLight]]];
     CustomAccessoryDisclosureArrow *accessory = [CustomAccessoryDisclosureArrow accessoryWithColor:cell.textLabel.textColor];
     accessory.highlightedColor = [UIColor whiteColor];
     cell.accessoryView =accessory;
@@ -162,7 +144,6 @@
     [poiViewController setTitle:[dataSet objectAtIndex:row]];
     poiViewController.highlightColor = [self retrieveCellHighLight];
     [self.navigationController pushViewController:poiViewController animated:YES];
-    [poiViewController release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
      

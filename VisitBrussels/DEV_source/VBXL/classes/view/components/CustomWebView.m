@@ -38,8 +38,6 @@
         bgr.backgroundColor = [UIColor redColor];
         
         [self addSubview:bgr];
-    
-        [bgr release];
         
 		myurl = incurl;
         
@@ -62,8 +60,6 @@
 		UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"Browser"];
 		item.leftBarButtonItem = rightButton;
 		[bar pushNavigationItem:item animated:YES];
-		[rightButton release];
-		[item release];
         
         CGRect frameto = self.frame;
         
@@ -91,7 +87,6 @@
 -(void) stopTimer {
 	[repeatingTimer invalidate];
     self.repeatingTimer = nil;
-	[repeatingTimer release];
 }
 
 -(void)timerFireMethod:(NSTimer*)theTimer {
@@ -104,7 +99,6 @@
 	
 	alertView.delegate = self;
 	[alertView show];
-	[alertView release];
 }
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -156,15 +150,6 @@
 		internet = YES;
 	}
 	return internet;
-}
-
-- (void)dealloc {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	myview.delegate = nil;
-	[self stopTimer];
-	[bar release];
-	[myview release];	
-    [super dealloc];
 }
 
 @end

@@ -12,11 +12,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [categories release];
-    [super dealloc];
-}
-
 #define kCategories        @"Categories"
 
 - (void) encodeWithCoder:(NSCoder *)encoder {

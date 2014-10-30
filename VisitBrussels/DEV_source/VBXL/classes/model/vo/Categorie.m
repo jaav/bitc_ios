@@ -20,17 +20,6 @@
     return self;
 }
 
-- (void)dealloc {
-    
-    [items release];
-    [group release];
-    [language release];
-    [exporteddate release];
-    
-    [super dealloc];
-}
-
-
 #define kItems        @"Items"
 #define kGroup        @"Group"
 #define kLanguage     @"Language"

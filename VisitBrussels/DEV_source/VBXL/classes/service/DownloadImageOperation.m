@@ -21,7 +21,6 @@
 }
 
 -(void)main {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
     NSLog(@"download image start");
@@ -45,18 +44,12 @@
     }
     
     [[Services sharedInstance] performSelectorOnMainThread:@selector(downloadImageCompleteAll:) withObject:dict waitUntilDone:YES];
-    [pool drain];
 }
 
 - (void)setProgress:(float)progress
 {
     int progressInPercent = [[NSNumber numberWithFloat:progress * 100] intValue];
     [[Services sharedInstance] performSelectorOnMainThread:@selector(downloadImageProgress:) withObject:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:progressInPercent] forKey:@"currentProgress"] waitUntilDone:YES]; 
-}
-
--(void)dealloc  {
-    [downloadArray release];
-    [super dealloc];
 }
 
 @end

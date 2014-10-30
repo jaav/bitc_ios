@@ -52,27 +52,6 @@ static VBXLNotificationCenter *_instance;
     return self;	
 }
 
-- (id)retain
-{	
-    return self;	
-}
-
-- (unsigned)retainCount
-{
-    return UINT_MAX;  //denotes an object that cannot be released
-}
-
-- (void)release
-{
-    //do nothing
-}
-
-- (id)autorelease
-{
-    [connectednotifname release];
-    return self;	
-}
-
 #pragma mark -
 #pragma mark Custom Methods
 

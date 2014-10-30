@@ -13,32 +13,6 @@
 
 @synthesize parentgroup,address,body,city,email,fax,latitude,longitude,phone,title,website,smallimage,id_item,zipcode,positionlist,fromdate,todate,cuisines,price,ranking, imagefilename,bigimage,bigimagefilename;
 
-- (void)dealloc
-{
-    [parentgroup release];
-    [imagefilename release];
-    [fromdate release];
-    [todate release];
-    [cuisines release];
-    [address release];
-    [body release];
-    [city release];
-    [email release];
-    [fax release];
-    [latitude release];
-    [longitude release];
-    [phone release];
-    [title release];
-    [website release];
-    [smallimage release];
-    [bigimage release];
-    [bigimagefilename release];
-    [price release];
-    
-    [super dealloc];
-}
-
-
 #define kParentGroup    @"ParentGroup"
 #define kAddress        @"Address"
 #define kBody           @"Body"

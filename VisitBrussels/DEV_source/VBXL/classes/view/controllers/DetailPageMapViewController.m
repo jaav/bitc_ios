@@ -34,8 +34,6 @@
     RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"marker-blue.png"]];
     
     [[mapView markerManager] addMarker:marker AtLatLong:firstLocation];
-    
-    [marker release];
 }
 
 -(void) setMarkers {
@@ -60,8 +58,6 @@
         
         NSMutableArray *arr = [NSMutableArray arrayWithObjects:selectedsubs,@"pinDoSee@2x.png" ,nil];
         [thisarr addObject:arr];
-        
-        [selectedsubs release];
     }
     
     if([rbtnEatDrink isSelected]) {
@@ -81,7 +77,6 @@
     
     
     [LMRMapUtil setMarkers:thisarr ForMap:mapView];
-    [thisarr release];    
     [self setItemLocation];
     
 }
@@ -96,42 +91,34 @@
             DetailPageBBViewController *detailpage = [[DetailPageBBViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageBBViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else if ([item.parentgroup isEqualToString:@"CULTURE"]) {
             DetailPageCultureViewController *detailpage = [[DetailPageCultureViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageCultureViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else if ([item.parentgroup isEqualToString:@"BREAKFAST"]) {
             DetailViewBreakfastViewController *detailpage = [[DetailViewBreakfastViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageBreakfastViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else if ([item.parentgroup isEqualToString:@"CITYTRIP"]) {
             DetailPageCitytripsViewController *detailpage = [[DetailPageCitytripsViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageCitytripsViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else if ([item.parentgroup isEqualToString:@"WALK"]) {
             DetailPageWalksViewController *detailpage = [[DetailPageWalksViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageWalksViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else if ([item.parentgroup isEqualToString:@"OG_TOUR"]) {
             DetailPageWalksViewController *detailpage = [[DetailPageWalksViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageWalksViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else if ([item.parentgroup isEqualToString:@"RESTO"]) {
             DetailPageRestoViewController *detailpage = [[DetailPageRestoViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageRestoViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release]; 
         }else{
             DetailPageViewController *detailpage = [[DetailPageViewController alloc] initWithNibNameAndItem:[DataController adjustedNibName:@"DetailPageViewController"] bundle:nil item:item];
             [detailpage setTitle:item.title];
             [self.navigationController pushViewController:detailpage animated:YES];
-            [detailpage release];
         }
     }
 }
@@ -169,10 +156,10 @@
     
     int multiplier = isPad?2:1;
     
-    rbtnDoSee.frame = CGRectMake(originX, 16, 58*multiplier, 55*multiplier);
-    rbtnEatDrink.frame = CGRectMake(originX+diffX, 16, 58*multiplier, 55*multiplier);
-    rbtnNightLife.frame = CGRectMake(originX+2*diffX, 16, 58*multiplier, 55*multiplier);
-    rbtnSleep.frame = CGRectMake(originX+3*diffX, 16, 58*multiplier, 55*multiplier);
+    rbtnDoSee.frame = CGRectMake(originX, 72, 58*multiplier, 55*multiplier);
+    rbtnEatDrink.frame = CGRectMake(originX+diffX, 72, 58*multiplier, 55*multiplier);
+    rbtnNightLife.frame = CGRectMake(originX+2*diffX, 72, 58*multiplier, 55*multiplier);
+    rbtnSleep.frame = CGRectMake(originX+3*diffX, 72, 58*multiplier, 55*multiplier);
     
     [self.view addSubview:rbtnDoSee];
     [self.view addSubview:rbtnEatDrink];
@@ -191,7 +178,7 @@
                              if(isPad)
                                  mapView.frame = CGRectMake(9.0f, 135.0f, 750, 800);
                              else
-                                 mapView.frame = CGRectMake(9.0f, 82.0f, 302, 318);
+                                 mapView.frame = CGRectMake(9.0f, 135.0f, 302, 318);
                              
                              subGroupDivider.alpha = 0;
                              subGroupsFilterView.alpha = 0;
@@ -210,7 +197,7 @@
                              if(isPad)
                                  mapView.frame = CGRectMake(9.0f, 173.0f, 750, 800);
                              else
-                                 mapView.frame = CGRectMake(9.0f, 120.0f, 302, 318);
+                                 mapView.frame = CGRectMake(9.0f, 165.0f, 302, 318);
                              subGroupDivider.alpha = 1;
                              subGroupsFilterView.alpha = 1;
                              arrowLeft.alpha = 1;
@@ -268,13 +255,10 @@
         
         [app openURL:url];
         
-        [url release];
-        
     } else {
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"CONINTITLE", nil) message:NSLocalizedString(@"CONINMESSAGE", nil) delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
-        [alert release];
     }
 }
 
@@ -287,10 +271,6 @@
         //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItemRight = [[UIBarButtonItem alloc] initWithCustomView:btnList];
     self.navigationItem.rightBarButtonItem = customBarItemRight;
-    [customBarItemRight release];
-    [btnList release];
-
-    
 }
 
 
@@ -311,40 +291,6 @@
     return self;
 }
 
-- (void)dealloc {
-    
-    if (self.navigationItem.rightBarButtonItem) {
-        
-        CTAButton *button = (CTAButton*) self.navigationItem.rightBarButtonItem.customView;
-        
-        [button removeTarget:self action:@selector(gotoGoogleMaps) forControlEvents:UIControlEventTouchUpInside];
-        
-        self.navigationItem.rightBarButtonItem = nil;
-    }
-    
-    //[[NSNotificationCenter defaultCenter] removeObserver:self name:internetcallback object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    [controller.locMgr stopUpdatingHeading];
-    [controller release];
-    [rbtnDoSee release];
-    [rbtnSleep release];
-    [rbtnEatDrink release];
-    [rbtnNightLife release];
-    [mapView release];
-    [self.myitem release];
-    [btnBack release];
-    
-    [subGroupDivider release];
-    [subGroupsFilterView release];
-    [arrowLeft release];
-    [arrowRight release];
-        //[internetcallback release];
-    
-    [super dealloc];
-}
-
 - (void)didReceiveMemoryWarning
 {
         // Releases the view if it doesn't have a superview.
@@ -357,8 +303,6 @@
 
 - (void)viewDidLoad {
     
-    
-    
     [self configRoute];
     [self configNavBar];
     
@@ -370,7 +314,7 @@
     if(isPad)
         mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 135.0f, 750, 800)];
     else
-        mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 82.0f, 302, 318)];
+        mapView = [[RMMapView alloc] initWithFrame:CGRectMake(9.0f, 135.0f, 302, 318)];
     mapView.delegate = self;
     id <RMTileSource> tileSource = [[RMDBMapSource alloc] initWithPath:@"mapofbrussel.db"] ;
     
@@ -389,12 +333,6 @@
     RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"marker-blue.png"]];
     
     [manager addMarker:marker AtLatLong:firstLocation];
-    [rmcontents release];
-    
-    [tileSource release];
-    [manager release];
-    
-    [marker release];
     
     [self.view addSubview:mapView];
     
@@ -404,7 +342,7 @@
     //subgroups dosee + divider
     int multiplier = isPad?2:1;
     
-    subGroupDivider = [[UIImageView alloc] initWithFrame:CGRectMake(10, 80, 301, 2)];
+    subGroupDivider = [[UIImageView alloc] initWithFrame:CGRectMake(10, 120, 301, 2)];
     subGroupDivider.image = [UIImage imageNamed:@"aroundMeSubDivider.png"];
     [self.view addSubview:subGroupDivider];
     subGroupDivider.alpha = 0;
@@ -414,7 +352,7 @@
     if(isPad)
         arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 140, 17*multiplier, 12*multiplier)];
     else
-        arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 95, 17*multiplier, 12*multiplier)];
+        arrowLeft = [[UIImageView alloc] initWithFrame:CGRectMake(10, 140, 17*multiplier, 12*multiplier)];
     
     arrowLeft.image = [UIImage imageNamed:[DataController adjustedImageName:@"arrowDoSeeFilterLeft.png"]];
     [self.view addSubview:arrowLeft];
@@ -423,7 +361,7 @@
     if(isPad)
         arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(721, 140, 17*multiplier, 12*multiplier)];
     else
-        arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(293, 95, 17, 12)];
+        arrowRight = [[UIImageView alloc] initWithFrame:CGRectMake(293, 140, 17, 12)];
     arrowRight.image = [UIImage imageNamed:[DataController adjustedImageName:@"arrowDoSeeFilterRight.png"]];
     [self.view addSubview:arrowRight];
     arrowRight.alpha = 0;
@@ -431,7 +369,7 @@
     if(isPad)
         subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(44, 130, 678, 40)];
     else
-        subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(30, 80, 260, 40)];
+        subGroupsFilterView = [[UIScrollView alloc]initWithFrame:CGRectMake(30, 127, 260, 40)];
     
     [subGroupsFilterView setContentSize:CGSizeMake(800, 40)];
     subGroupsFilterView.backgroundColor = [UIColor clearColor];
@@ -454,8 +392,7 @@
         }
         [subGroupsFilterView addSubview:myButton];
         [myButton addTarget:self action:@selector(subGroupClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-        [myButton release];
+    
         }
     
     [subGroupsFilterView setContentSize:CGSizeMake(takenWidth + 10, 40)];
@@ -501,7 +438,6 @@
         //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
     self.navigationItem.leftBarButtonItem = customBarItem;
-    [customBarItem release];
 }
 
 -(void)backToHome {

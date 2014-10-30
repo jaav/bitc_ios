@@ -682,8 +682,8 @@
 				B83E64EE0E80E73F001663B6 /* RMOpenStreetMapSource.m */,
 				C7A9675C0E84134B0031BA75 /* RMVirtualEarthSource.h */,
 				C7A9675D0E84134B0031BA75 /* RMVirtualEarthSource.m */,
-				D1437B32122869E400888DAE /* RMDBMapSource.m */,
 				D1437B33122869E400888DAE /* RMDBMapSource.h */,
+				D1437B32122869E400888DAE /* RMDBMapSource.m */,
 				B885ABB00EBB1332002206AB /* RMCloudMadeMapSource.h */,
 				B885ABB10EBB1332002206AB /* RMCloudMadeMapSource.m */,
 				2B5682700F68E36000E8DF40 /* RMOpenAerialMapSource.h */,
@@ -906,7 +906,7 @@
 			name = MapViewTests;
 			productName = MapViewTests;
 			productReference = 17157D87133BBC8300E28941 /* MapViewTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		2BF3078E0F8AC5C0007014EE /* Unit Tests */ = {
 			isa = PBXNativeTarget;

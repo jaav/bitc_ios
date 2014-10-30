@@ -29,10 +29,6 @@
     //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
     self.navigationItem.leftBarButtonItem = customBarItem;
-    [customBarItem release];
-    
-    [btnBack release];
-    
 }
 
 -(void) webViewDidStartLoad:(UIWebView *)webView {
@@ -58,7 +54,7 @@
 
 -(void)configWebView {
     
-    myview = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-(self.navigationController.navigationBar.frame.size.height))];
+    myview = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-(self.navigationController.navigationBar.frame.size.height))];
     myview.alpha = 0;
     myview.delegate = self;
     [self.view addSubview:myview];
@@ -73,25 +69,6 @@
         
     }
     return self;
-}
-
-- (void)dealloc {
-    NSHTTPCookie *cookie;
-    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    for (cookie in [storage cookies]) {
-        
-        NSString *mydomain = [NSString stringWithString:cookie.domain];
-        NSRange aRange = [mydomain rangeOfString:@"booking.com"];
-        if (aRange.location != NSNotFound) {
-                [storage deleteCookie:cookie];
-        } 
-        
-    }
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-	myview.delegate = nil;
-    [myview release];
-    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning

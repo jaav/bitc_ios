@@ -13,7 +13,7 @@
 @interface ASINetworkQueue : NSOperationQueue <ASIProgressDelegate, ASIHTTPRequestDelegate, NSCopying> {
 	
 	// Delegate will get didFail + didFinish messages (if set)
-	id delegate;
+	__unsafe_unretained id delegate;
 
 	// Will be called when a request starts with the request as the argument
 	SEL requestDidStartSelector;
@@ -36,7 +36,7 @@
 	SEL queueDidFinishSelector;
 	
 	// Upload progress indicator, probably an NSProgressIndicator or UIProgressView
-	id uploadProgressDelegate;
+	__unsafe_unretained id uploadProgressDelegate;
 	
 	// Total amount uploaded so far for all requests in this queue
 	unsigned long long bytesUploadedSoFar;
@@ -45,7 +45,7 @@
 	unsigned long long totalBytesToUpload;
 
 	// Download progress indicator, probably an NSProgressIndicator or UIProgressView
-	id downloadProgressDelegate;
+	__unsafe_unretained id downloadProgressDelegate;
 	
 	// Total amount downloaded so far for all requests in this queue
 	unsigned long long bytesDownloadedSoFar;

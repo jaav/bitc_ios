@@ -37,24 +37,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [myTableView release];
-    [listContent release];
-    [filteredListContent release];
-    [searchDisplayController release];
-    [btnBack release];
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad{
@@ -74,6 +56,8 @@
 	[mySearchBar sizeToFit];
 	
     self.myTableView.tableHeaderView = mySearchBar;
+    
+    [self.myTableView.tableHeaderView setFrame:CGRectMake(0, 20, 320, 40)];
 	
 	searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:mySearchBar contentsController:self];
 	[self setSearchDisplayController:searchDisplayController];
@@ -81,8 +65,6 @@
 	[searchDisplayController setSearchResultsDataSource:self];
     [searchDisplayController setActive:YES animated:NO];
     
-	[mySearchBar release];
-	
 	[self.myTableView reloadData];
 	self.myTableView.scrollEnabled = YES;
     
@@ -121,7 +103,10 @@
 #pragma mark - Config Methods
 -(void)configTableView
 {
-    self.myTableView = [[[UITableView alloc] initWithFrame:self.view.bounds] autorelease];
+    CGRect destFrame = self.view.bounds;
+    destFrame.origin.y+=20.0f;
+    destFrame.size.height -=20.0f;
+    self.myTableView = [[UITableView alloc] initWithFrame:self.view.frame];
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
     self.myTableView.delegate = self;
@@ -139,7 +124,6 @@
     //create a UIBarButtonItem with the button as a custom view
     UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
     self.navigationItem.leftBarButtonItem = customBarItem;
-    [customBarItem release];
 }
 
 -(void)backToHome
@@ -170,7 +154,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
 	if (cell == nil)
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
