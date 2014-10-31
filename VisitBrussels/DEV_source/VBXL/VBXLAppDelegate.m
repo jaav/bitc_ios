@@ -19,15 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
  
-    UINavigationController *categoryController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    self.window.rootViewController = categoryController;
-    //[self.window addSubview:categoryController.view];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    self.window.rootViewController = navController;
+    //[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
-    
-    DataController *datacontroller = [DataController sharedInstance];
-    [datacontroller controlDataStartUp];
-    
-    
     return YES;
 }
 

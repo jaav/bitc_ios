@@ -9,8 +9,6 @@
 #import "VBXLViewController.h"
 #import "BackButton.h"
 
-#import "DownloadAllImages.h"
-
 @interface VBXLViewController() {
     int maxItem;
     int currentIndex;
@@ -62,10 +60,6 @@
     
         [foreground removeFromSuperview];
     
-        /*
-        DownloadAllImages *down = [[DownloadAllImages alloc] init];
-        [down setAllFolders];
-        [down release];*/
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -84,14 +78,19 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageStart:) name:@"downloadImageStart" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageProgress:) name:@"downloadImageProgress" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDownloadImageCompleteAll:) name:@"downloadImageCompleteAll" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startTheApp) name:@"startheapp" object:nil];
     
     if(!foreground) {
         foreground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[DataController adjustedImageName:@"WaitScreen.png"]]];
         foreground.frame =self.view.bounds;
         [self.view addSubview:foreground];
           self.view.userInteractionEnabled = FALSE;
-          [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startTheApp) name:@"startheapp" object:nil];
+        
+        DataController *datacontroller = [DataController sharedInstance];
+        [datacontroller controlDataStartUp];
+        
     }
+    
     [super viewDidLoad];
 }
 
@@ -132,7 +131,7 @@
         [label2 setHidden:YES];
         [progress1 setHidden:YES];
         [progress2 setHidden:YES];
-        
+        loadingView.frame = self.view.bounds;
         [self.view addSubview:loadingView];
         [self.view bringSubviewToFront:loadingView];
     }

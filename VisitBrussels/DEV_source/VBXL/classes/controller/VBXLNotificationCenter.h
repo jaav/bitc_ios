@@ -19,7 +19,5 @@
 
 @property(nonatomic,retain) NSString *connectednotifname;
 
--(void) startApp;
--(void) xmlfilesAreLoadedFromTheInternet;
 -(void) weAreConnectedToTheInternet:(NSString*)connected;
 @end

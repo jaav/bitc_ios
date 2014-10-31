@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-/W3C/DTD XHTML 1.0 Transitional/EN" "http:/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<html manifest="cache.appcache" xmlns="http:/www.w3.org/1999/xhtml" xml:lang="FR" lang="FR">-->
+<html xmlns="http:/www.w3.org/1999/xhtml" xml:lang="FR" lang="FR">
+<head>
+<title>Shop In Brussels</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-encoding" content="gzip" />
+<!--<meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=0.5, minimum-scale=0.5, maximum-scale=3">-->
+<meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5">
+<!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="apple-touch-icon" href="/gfx/640/icon.png">
+
+<meta name="keywords" content="shopinbrussels" />
+<meta name="description" content="shopinbrussels" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/styles_init.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="/css/styles_base_640.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="/css/styles_fancybox.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="/css/jquery.mobile.css" media="screen, print" />
+
+<script language="javascript" type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/fancybox.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/tools.min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/fancybox.pack.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery-lang.js"></script>
+<script language="javascript" type="text/javascript" src="/js/langpack/fr.js"></script>
+<script language="javascript" type="text/javascript" src="/js/langpack/en.js"></script>
+<script language="javascript" type="text/javascript" src="/js/langpack/nl.js"></script>
+<script language="javascript" type="text/javascript" src="/js/functions_online.js"></script>
+<script language="javascript" type="text/javascript" src="/js/appcache.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.mobile.min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.json-2.3.min.js"></script>
+
+<script language="javascript" type="text/javascript" src="/js/jquery.smart_autocomplete.js"></script>
+<script language="javascript" type="text/javascript" src="/js/qs_score.js"></script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-35983766-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</head>
+<body>
+<div id="fb-root"></div>
+<div data-role="page" id="page-home" class="jqm">
+    <div id="menu" data-role="header" data-position="fixed">
+        <div id="menu-inside">
+            <a href="#" class="btn_menu" lang="lang">Menu</a>
+            <center><a href="/fr/index/" data-transition="fade" data-ajax="false" class="logo">&nbsp;</a></center>
+            <div class="menu_items">
+                <a href="/fr/" data-transition="fade" data-ajax="false" class="home" lang="lang">Home</a>
+                <a href="/fr/find-a-shop/" data-transition="fade" data-ajax="false" class="find" lang="lang">Find a shop</a>
+                <a href="/fr/specialties-and-selections/" data-transition="fade" data-ajax="false" class="spec" lang="lang">Specialties and selections</a>
+                <a href="/fr/favorites/" data-transition="fade" data-ajax="false" class="fav" lang="lang">My favorites</a>
+                <a href="/fr/parameters-and-contact/" data-transition="fade" data-ajax="false" class="param" lang="lang">Parameters and contact</a>
+            </div>
+            <a href="javascript:history.back();" class="btn_back"><span>&nbsp;</span><strong lang="lang">Back</strong></a>
+        </div>
+    </div>
+    <div id="container">
+        <div id="data" data-role="content" style="margin-top: 58px;">
+                            <div id="scroll-container">
+                    <div class="pages"></div>
+                    <div id="header-container">
+                        <div class="header_items" id="header_items" style="display: block;">
+                            <a href="http://m.shopinbrussels.be/yeti" class="header_item" data-ajax="false" data-transition="fade">                                
+                                <center><img border="0" class="images" alt="" src="/images/slideshow/640x240/1661121031512b41cf40a44.jpg"></center>
+                                <span class="title"><span>Yeti, cantine moderne</span>
+                            </a>
+                            <a href="http://m.shopinbrussels.be/natachacadonici" class="header_item" data-ajax="false" data-transition="fade">                                
+                                <center><img border="0" class="images" alt="" src="/images/slideshow/640x240/1363543602512b420ab0e25.jpg"></center>
+                                <span class="title"><span>Natacha Cadonici</span>
+                                
+                                <span class="title_bottom">Atelier-boutique de créatrice</span></span>
+                            </a>
+                            <a href="http://m.shopinbrussels.be/jourdefete" class="header_item" data-ajax="false" data-transition="fade">                                
+                                <center><img border="0" class="images" alt="" src="/images/slideshow/640x240/807934597512b422c63fb1.jpg"></center>
+                                <span class="title"><span>Jour de Fête</span>
+                                
+                                <span class="title_bottom">Restaurant / Salle de fête</span></span>
+                            </a>
+                            <a href="http://m.shopinbrussels.be/lafleurdupain" class="header_item" data-ajax="false" data-transition="fade">                                
+                                <center><img border="0" class="images" alt="" src="/images/slideshow/640x240/23300504351754628f03a2.jpg"></center>
+                                <span class="title"><span>La fleur du pain</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_main">
+                    <a href="/fr/find-a-shop/" data-transition="fade" data-ajax="false" class="find"><span lang="lang">Find a shop</span></a>
+                    <a href="/fr/specialties-and-selections/" data-transition="fade" data-ajax="false" class="spec"><span lang="lang">Specialties and selections</span></a>
+                    <a href="/fr/favorites/" data-transition="fade" data-ajax="false" class="fav"><span lang="lang">My favorites</span></a>
+                    <a href="/fr/parameters-and-contact/" data-transition="fade" data-ajax="false" class="param"><span lang="lang">Parameters and contact</span></a>
+                </div>
+
+<script type="text/javascript" language="JavaScript">
+// <![CDATA[
+$(document).ready(function(){
+    $('#header-container').scrollable({circular: true,mousewheel: true,clickable: false,speed: 750}).navigator({navi: ".pages",naviItem: 'a',activeClass: 'current'}).autoscroll({autoplay: true,interval: 5000});
+});
+// ]]>
+</script>
+
+        </div>
+    </div>
+</div>
+<a href="/fr/langs-select/" data-transition="fade" data-ajax="false" class="fancy_langs">&nbsp;</a>
+<script type="text/javascript" language="JavaScript">
+/*
+$(document).ready(function() {
+    $("a").click(function (event) {
+        //event.preventDefault();
+        window.location = $(this).attr("href");
+        return false;
+    });
+});
+*/
+// <![CDATA[
+/*$(document).ready(function() {$('a.fancy_loading').fancybox({'type': 'inline', 'padding':5,'overlayOpacity':0.5,'overlayColor':'#000','titlePosition':'inside', 'hideOnOverlayClick': false, 'showCloseButton': false, 'autoScale': false, 'onComplete': completeFancy});});*/
+// ]]>
+</script>
+
+</body>
+</html>

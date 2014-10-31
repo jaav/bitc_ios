@@ -61,8 +61,7 @@ static Services *_instance;
 
 
 - (void) checkIfConnectedToInternet {
-    NSString *path;
-    path = [NSString stringWithString: @"http://www.google.com"];
+    NSString *path = @"http://www.google.com";
     NSURL *url = [NSURL URLWithString:path];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setDelegate:self];
@@ -101,9 +100,9 @@ static Services *_instance;
         
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
         request.delegate = self;
-        [request setDownloadCache:[ASIDownloadCache sharedCache]];
-        [request setCachePolicy:ASIAskServerIfModifiedCachePolicy|ASIFallbackToCacheIfLoadFailsCachePolicy];
-        [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
+//        [request setDownloadCache:[ASIDownloadCache sharedCache]];
+//        [request setCachePolicy:ASIAskServerIfModifiedCachePolicy|ASIFallbackToCacheIfLoadFailsCachePolicy];
+//        [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
         [request setDownloadDestinationPath:localfile];
         
         [[self networkQueue] addOperation:request];
@@ -245,8 +244,7 @@ static Services *_instance;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadImageCompleteAll" object:nil userInfo:dict];
     
     NSLog(@"All new files are downloaded...start parsing");
-    VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
-    [notif xmlfilesAreLoadedFromTheInternet];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"doneloadingxmlfilesfrominternet" object:nil]];
 }
 
 @end

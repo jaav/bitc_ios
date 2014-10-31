@@ -57,15 +57,7 @@ static VBXLNotificationCenter *_instance;
 
 // Add your custom methods here
 
--(void) startApp {
-    NSNotification* notification = [NSNotification notificationWithName:@"startheapp" object:nil];
-	[[NSNotificationCenter defaultCenter] postNotification:notification];
-}
 
--(void) xmlfilesAreLoadedFromTheInternet {
-    NSNotification* notification = [NSNotification notificationWithName:@"doneloadingxmlfilesfrominternet" object:nil];
-	[[NSNotificationCenter defaultCenter] postNotification:notification];
-}
 
 -(void) weAreConnectedToTheInternet:(NSString*)connected {    
     NSNotification* notification = [NSNotification notificationWithName:self.connectednotifname object:connected];

@@ -104,8 +104,7 @@ static DataController *_instance;
          Services *service = [Services sharedInstance];
          [service loadXMLBasedOnLanguage:myaar];
     } else {
-        VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
-        [notif startApp];
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"startheapp" object:nil]];
     }
 }
 
@@ -427,8 +426,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
          [alert show];
      } else {
           NSLog(@"check for outdated files --> no outdated files found --> start app");
-         VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
-         [notif startApp];
+         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"startheapp" object:nil]];
      }
 }
 
@@ -440,8 +438,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
         [self checkForOutdatedFiles];
     } else {
         NSLog(@"connected to internet? --> %@ --> start app",notif.object);
-        VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
-        [notif startApp];
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"startheapp" object:nil]];
     }
 }
 
@@ -481,8 +478,7 @@ NSComparisonResult sortByNumber(id firstItem, id secondItem, void *context) {
     NSLog(@"xml files are downloaded");
     [self startParsingSequence];
     NSLog(@"start app");
-    VBXLNotificationCenter *notif = [VBXLNotificationCenter sharedInstance];
-    [notif startApp];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"startheapp" object:nil]];
 }
 
 
