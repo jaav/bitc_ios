@@ -899,7 +899,6 @@
 		BDD62B041A03912A00B97E54 /* 2307602.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DB81A0390D100B97E54 /* 2307602.jpg */; };
 		BDD62B051A03912A00B97E54 /* 2315735.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DB91A0390D100B97E54 /* 2315735.jpg */; };
 		BDD62B061A03912A00B97E54 /* 2355749.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DBA1A0390D100B97E54 /* 2355749.gif */; };
-		BDD62B071A03912A00B97E54 /* 2355749.png in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DBB1A0390D100B97E54 /* 2355749.png */; };
 		BDD62B081A03912A00B97E54 /* 23559.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DBC1A0390D100B97E54 /* 23559.jpg */; };
 		BDD62B091A03912A00B97E54 /* 240_203.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DBD1A0390D100B97E54 /* 240_203.jpg */; };
 		BDD62B0A1A03912A00B97E54 /* 2411314.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD61DBE1A0390D100B97E54 /* 2411314.jpg */; };
@@ -4943,7 +4942,6 @@
 		BDD61DB81A0390D100B97E54 /* 2307602.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2307602.jpg; sourceTree = "<group>"; };
 		BDD61DB91A0390D100B97E54 /* 2315735.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2315735.jpg; sourceTree = "<group>"; };
 		BDD61DBA1A0390D100B97E54 /* 2355749.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2355749.gif; sourceTree = "<group>"; };
-		BDD61DBB1A0390D100B97E54 /* 2355749.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2355749.png; sourceTree = "<group>"; };
 		BDD61DBC1A0390D100B97E54 /* 23559.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 23559.jpg; sourceTree = "<group>"; };
 		BDD61DBD1A0390D100B97E54 /* 240_203.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 240_203.jpg; sourceTree = "<group>"; };
 		BDD61DBE1A0390D100B97E54 /* 2411314.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2411314.jpg; sourceTree = "<group>"; };
@@ -9255,7 +9253,6 @@
 				BDD61DB81A0390D100B97E54 /* 2307602.jpg */,
 				BDD61DB91A0390D100B97E54 /* 2315735.jpg */,
 				BDD61DBA1A0390D100B97E54 /* 2355749.gif */,
-				BDD61DBB1A0390D100B97E54 /* 2355749.png */,
 				BDD61DBC1A0390D100B97E54 /* 23559.jpg */,
 				BDD61DBD1A0390D100B97E54 /* 240_203.jpg */,
 				BDD61DBE1A0390D100B97E54 /* 2411314.jpg */,
@@ -14199,7 +14196,6 @@
 				ADBB544A1488EEA80027AD72 /* ATTRACTIONS_EN.xml in Resources */,
 				BDD62C4A1A03912A00B97E54 /* 8000096-1.jpg in Resources */,
 				BDD6348F1A03912A00B97E54 /* jpg_13372.jpg in Resources */,
-				BDD62B071A03912A00B97E54 /* 2355749.png in Resources */,
 				BDD6323B1A03912A00B97E54 /* img_7583.jpg in Resources */,
 				BDD631771A03912A00B97E54 /* img_6615.bmp in Resources */,
 				BDD6322F1A03912A00B97E54 /* img_7497.jpg in Resources */,
@@ -16455,8 +16451,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -16465,8 +16461,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16478,8 +16474,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -16497,8 +16493,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -16509,8 +16505,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels (F25BSG469L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels (F25BSG469L)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -16519,8 +16515,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "7358ef7c-f4c2-490b-9623-dff36b718f1c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7358ef7c-f4c2-490b-9623-dff36b718f1c";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16532,8 +16528,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels (F25BSG469L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels (F25BSG469L)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -16551,8 +16547,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "7358ef7c-f4c2-490b-9623-dff36b718f1c";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7358ef7c-f4c2-490b-9623-dff36b718f1c";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -16563,8 +16559,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -16574,8 +16570,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16585,17 +16581,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = Entitlements.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
+				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16607,8 +16603,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -16626,8 +16622,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -16641,9 +16637,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Entitlements.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBXL/VBXL-Prefix.pch";
@@ -16660,8 +16655,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4B2BE2A8-895D-45B2-A013-061548C5FE33";
+				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
