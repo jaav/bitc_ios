@@ -206,7 +206,7 @@
     for (int i=0; i<[btnArray count]; i++) {
         UIButton *theButton = [btnArray objectAtIndex:i];
         [scrollView addSubview:theButton];
-        theButton.frame = CGRectMake(((isPad?69:20)+(i*75)), imageView.frame.origin.y+imageView.frame.size.height+70, 64, 30);
+        theButton.frame = CGRectMake(((isPad?69:20)+(i*75)), imageView.frame.origin.y+imageView.frame.size.height+10, 64, 30);
     }
 }
 

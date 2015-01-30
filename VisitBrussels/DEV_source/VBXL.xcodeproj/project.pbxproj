@@ -16453,6 +16453,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -16461,8 +16462,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				PROVISIONING_PROFILE = "ad07303d-57b4-45a0-ad1c-b204e12af433";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ad07303d-57b4-45a0-ad1c-b204e12af433";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16493,8 +16494,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				PROVISIONING_PROFILE = "ad07303d-57b4-45a0-ad1c-b204e12af433";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ad07303d-57b4-45a0-ad1c-b204e12af433";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -16507,6 +16508,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: visitbrussels (F25BSG469L)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: visitbrussels (F25BSG469L)";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -16561,6 +16563,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -16570,8 +16573,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				PROVISIONING_PROFILE = "ad07303d-57b4-45a0-ad1c-b204e12af433";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ad07303d-57b4-45a0-ad1c-b204e12af433";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16584,14 +16587,15 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Olivier van de Kerchove (5XPY3245XA)";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				PROVISIONING_PROFILE = "ad07303d-57b4-45a0-ad1c-b204e12af433";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ad07303d-57b4-45a0-ad1c-b204e12af433";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -16622,8 +16626,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				PROVISIONING_PROFILE = "ad07303d-57b4-45a0-ad1c-b204e12af433";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ad07303d-57b4-45a0-ad1c-b204e12af433";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -16655,8 +16659,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2b0222cc-00cd-4770-9486-86beef2d214a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2b0222cc-00cd-4770-9486-86beef2d214a";
+				PROVISIONING_PROFILE = "ad07303d-57b4-45a0-ad1c-b204e12af433";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ad07303d-57b4-45a0-ad1c-b204e12af433";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
