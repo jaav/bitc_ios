@@ -188,9 +188,10 @@
     if (![myitem.website isEqualToString:@""] && myitem.website != NULL) {
         
         if([myitem.parentgroup isEqualToString:@"HOTEL"]) {
-            btnSite = [[CTAButton alloc] initWithImage:@"btnBook" andHighlightImage:@"btnBookPressed"];
-            [btnSite addTarget:self action:@selector(gotoSite)forControlEvents:UIControlEventTouchUpInside];
-            [btnArray addObject:btnSite];
+            //MICHAEL: disable book button
+//            btnSite = [[CTAButton alloc] initWithImage:@"btnBook" andHighlightImage:@"btnBookPressed"];
+//            [btnSite addTarget:self action:@selector(gotoSite)forControlEvents:UIControlEventTouchUpInside];
+//            [btnArray addObject:btnSite];
         } else {
         btnSite = [[CTAButton alloc] initWithImage:@"btnSite" andHighlightImage:@"btnSitePressed"];
         [btnSite addTarget:self action:@selector(gotoSite)forControlEvents:UIControlEventTouchUpInside];

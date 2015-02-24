@@ -115,7 +115,9 @@
     if (cell == nil) {
         cell = [[SizableImageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         
-        if ([[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"RESTO"] || [[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"SHOPPING"] || [[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"CITYTRIP"]) {
+        if ([[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"RESTO"] ||
+            [[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"SHOPPING"] ||
+            [[data returnGroupNameBasedOnCurrentGroupIndex:[data currentgroup]] isEqualToString:@"CITYTRIP"]) {
             cell.imageheight = isPad?120:60;
             cell.imagewidth =  isPad?120:60;
         } else {
@@ -251,6 +253,9 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.frame = CGRectMake(0,0,imagewidth,imageheight);
-    self.textLabel.frame = CGRectMake(imagewidth+10,self.textLabel.frame.origin.y,self.textLabel.frame.size.width + 30,self.textLabel.frame.size.height);
+    self.textLabel.frame = CGRectMake(imagewidth+10,
+                                      self.textLabel.frame.origin.y,
+                                      [[UIScreen mainScreen] bounds].size.width - (imagewidth+10) - 30,
+                                      self.textLabel.frame.size.height);
 }
 @end
