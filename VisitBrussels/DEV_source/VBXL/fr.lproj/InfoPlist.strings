@@ -1,0 +1,3 @@
+/* Localized versions of Info.plist keys */
+
+"NSLocationAlwaysUsageDescription" = "Cette application utilise des informations de localisation trouver des endroits près de chez vous!";
